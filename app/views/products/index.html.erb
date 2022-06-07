@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Product Index Page</h1>
+  <% @products.each do |product| %>
+    <h2><%= product.name %></h2>
+    <p>Made by: <%= product.manufacturer %></p>
+    <p>Description: <%= product.description %></p>
+    <p>Ingredients:<%= product.ingredients %></p>
+    <p>Size: <%= product.bottle_size %></p>
+    <p>Price: £<%= product.price %></p>
+  <% end %>
+</div>
