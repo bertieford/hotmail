@@ -1,0 +1,15 @@
+<h1>New Product Page</h1>
+
+<div class="container">
+  <div class="form-group mt-3">
+    <%= simple_form_for @product do |f| %>
+      <%= f.input :name %>
+      <%= f.input :manufacturer %>
+      <%= f.input :description %>
+      <%= f.input :ingredients %>
+      <%= f.input :bottle_size %>
+      <%= f.input :price %>
+      <%= f.button :submit, class:"btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
