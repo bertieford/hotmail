@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Product show Page</h1>
+  <h2><%= @product.name %></h2>
+  <p>Made by: <%= @product.manufacturer %></p>
+  <p>Description: <%= @product.description %></p>
+  <p>Ingredients:<%= @product.ingredients %></p>
+  <p>Size: <%= @product.bottle_size %></p>
+  <p>Price: £<%= @product.price %></p>
+
+  <%= link_to "All Sauces", products_path %>
+  <%= link_to "Edit Sauce", edit_product_path(@product) %>
+  <%= link_to "Delete Sauce", product_path(@product), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+</div>
