@@ -7,5 +7,6 @@
     <p>Ingredients:<%= product.ingredients %></p>
     <p>Size: <%= product.bottle_size %></p>
     <p>Price: £<%= product.price %></p>
+    <%= link_to "Learn More", product_path(product) %>
   <% end %>
 </div>
