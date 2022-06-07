@@ -5,13 +5,17 @@ class OrdersController < ApplicationController
     @order = Order.new
   end
 
+  def index
+    @orders = Order.all
+  end
+
   def create
     @order = Order.new(order_params)
     @order.user = current_user
   end
 
   def show
-    @products = Product
+    @products = @order.products
   end
 
   private
