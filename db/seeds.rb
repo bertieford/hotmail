@@ -19,4 +19,4 @@ puts "Products created"
 puts "Deleting Users"
 User.destroy_all
 puts "Creating admin"
-admin = User.create!(first_name: "admin", email: "admin@admin.com", password: "123456")
+admin = User.create!(first_name: "admin", email: "admin@admin.com", password: "123456", admin: true)
