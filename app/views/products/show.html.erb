@@ -1,11 +1,12 @@
 <div class="container">
-  <h1><%= @product.name %></h1>
-  <p><strong>Made by:</strong> <%= @product.manufacturer %></p>
-  <p><strong>Description:</strong> <%= @product.description %></p>
-  <p><strong>Ingredients:</strong><%= @product.ingredients %></p>
-  <p><strong>Size:</strong> <%= @product.bottle_size %></p>
-  <p><strong>Price:</strong> £<%= @product.price %></p>
-
+  <div class="show-card">
+    <h1><%= @product.name %></h1>
+    <p><strong>Made by:</strong> <%= @product.manufacturer %></p>
+    <p><strong>Description:</strong> <%= @product.description %></p>
+    <p><strong>Ingredients:</strong><%= @product.ingredients %></p>
+    <p><strong>Size:</strong> <%= @product.bottle_size %></p>
+    <p><strong>Price:</strong> £<%= @product.price %></p>
+  </div>
   <%= link_to "All Sauces", products_path %>
   <%= link_to "Edit Sauce", edit_product_path(@product) %>
   <%= link_to "Delete Sauce", product_path(@product), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
