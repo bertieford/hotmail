@@ -1,0 +1,24 @@
+/* shop now button */
+
+.myButton {
+	background-color:#ee8534;
+	border-radius:42px;
+	display:inline-block;
+	cursor:pointer;
+	color:#f4f4f6;
+	font-family:Arial;
+	font-size:18px;
+	font-weight:bold;
+	padding:15px 58px;
+	text-decoration:none;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-54%, -50%);
+}
+.myButton:hover {
+	background-color:#b01a1a;
+  transition-duration: 0.3s;
+}

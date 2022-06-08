@@ -1,0 +1,80 @@
+/* newsletter */
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1B2432;
+  color: white;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+
+
+.box {
+  color: #1B2432;
+}
+
+.blue_dark {
+  background-color: #1B2432;
+  color: #f4f4f6;
+  width: 100%;
+}
+
+.blue_dark h1 {
+  padding-top: 50px;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 56px;
+}
+
+.blue_dark p {
+  padding-top: 16px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+
+.form-control {
+	position: relative;
+	margin: 30px 0 20px;
+}
+
+.input {
+	border: 0;
+	border-radius: 50px;
+	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+	display: block;
+	font-family: 'Muli', sans-serif;
+	font-size: 14px;
+	height: 42px;
+	padding: 12px 25px;
+	width: 50%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.btn {
+	background-color: #EE8434;
+	border: 0;
+	border-radius: 0px 50px 50px 0px;
+	color: #fff;
+	font-size: 14px;
+	height: 42px;
+  width: 30%;
+	padding: 12px 25px;
+	position: absolute;
+	top: 0;
+	right: 0;
+  font-weight: bold;
+  margin-left: 5%;
+  margin-right: 30%;
+}
