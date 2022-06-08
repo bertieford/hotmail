@@ -18,6 +18,13 @@ class OrdersController < ApplicationController
     @products = @order.products
   end
 
+  def add_to_basket
+    unless current_user.order
+      @order = Order.create(user_id: current_user.id)
+    end
+    # @product = Product.find(params[:id])
+  end
+
   private
   def set_order
     @order = Order.find(params[:id])
