@@ -1,0 +1,44 @@
+ /* NAVBAR STYLING STARTS */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f4f4f6;
+  color: #1B2432;
+  padding-left: 5%;
+  padding-right: 5%;
+ }
+ .nav-links a {
+  color: #1B2432;
+ }
+ /* LOGO */
+ .logo {
+  font-size: 32px;
+ }
+
+ /* NAVBAR MENU */
+ .menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+ }
+
+ .menu :hover {
+   color: #EE8434;
+ }
+
+ .menu li:hover {
+  transition: 0.3s ease;
+ }
+ .menu li {
+  padding: 5px 14px;
+ }
+
+ .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
