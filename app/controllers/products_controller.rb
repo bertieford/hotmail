@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     if @product.save
-      redirct_to product_path(@product)
+      redirect_to product_path(@product)
     else
       render :new, status: :unprocessable_entity
     end
