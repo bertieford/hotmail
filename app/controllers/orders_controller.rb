@@ -19,11 +19,19 @@ class OrdersController < ApplicationController
   end
 
   def add_to_basket
-    unless current_user.order
-      @order = Order.create(user_id: current_user.id)
+    if !current_user.orders.empty?
+      if current_user.orders.last.complete
+        create
+      end
     end
-    # @product = Product.find(params[:id])
+    # raise
+    @product = Product.find(params[:id])
+    redirect_to  product_order_products_path(@product)
   end
+    # @product = Product.find(params[:id])
+    # fetch the order which is opened
+    # will create new order_product and assign it the order id and product id.
+    # basket(order with pending status) will render products.all
 
   private
   def set_order
