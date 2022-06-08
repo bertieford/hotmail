@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :products do
     resources :order_products, only: [:create]
   end
-  get "products/:id/add_to_basket", to: "orders#add_to_basket", as: :additem
+  # get "products/:id/add_to_basket", to: "orders#add_to_basket", as: :additem
   resources :orders
   # Defines the root path route ("/")
   # root "articles#index"
