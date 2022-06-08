@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="show-conteent d-flex justify-content-between pt-5">
+    <div class="show-card">
+      <h1><%= @product.name %></h1>
+      <p><strong>By:</strong> <%= @product.manufacturer %></p>
+      <p><%= @product.description %></p>
+      <p><strong>Ingredients: </strong><%= @product.ingredients %></p>
+      <p><strong>Size:</strong> <%= @product.bottle_size %></p>
+      <p><strong>Price:</strong> £<%= @product.price %></p>
+    </div>
+    <div class="show-img">
+      <img src="//cdn.shopify.com/s/files/1/2086/9287/products/NuggetHoney11.jpg?v=1616537010&width=680" alt="">
+    </div>
+  </div>
+  <%= link_to "All Sauces", products_path, class:"btn btn-primary"%>
+  <%= link_to "Edit Sauce", edit_product_path(@product), class:"btn btn-primary"%>
+  <%= link_to "Delete Sauce", product_path(@product), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this product?"}, class:"btn btn-primary"%>
+</div>
