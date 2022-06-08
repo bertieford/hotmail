@@ -1,12 +1,11 @@
 class OrdersController < ApplicationController
- before_action :set_order, only: [:show]
 
   def new
     @order = Order.new
   end
 
   def index
-    @orders = Order.all
+    @orders = Order.where(user: current_user)
   end
 
   def create
@@ -15,7 +14,9 @@ class OrdersController < ApplicationController
   end
 
   def show
-    @products = @order.products
+    @orders = Order.where(user: current_user)
+    @order = Order.find(params[:id]) # how does show page know which order is the live one?
+    @products = @order.products # how is an order locating lots of products? via lots of joins tables..?
   end
 
   def add_to_basket
@@ -24,7 +25,6 @@ class OrdersController < ApplicationController
         create
       end
     end
-    # raise
     @product = Product.find(params[:id])
     redirect_to  product_order_products_path(@product)
   end
@@ -34,9 +34,6 @@ class OrdersController < ApplicationController
     # basket(order with pending status) will render products.all
 
   private
-  def set_order
-    @order = Order.find(params[:id])
-  end
 
   def order_params
     params.require(:order).permit(:price)
