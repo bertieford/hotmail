@@ -52,6 +52,14 @@ a{
 
 // SHOW PAGE CARD
 .show-card{
-  border: 1px black solid;
   width: 50%;
+}
+
+.show-img{
+padding-left: 16px;
+height: 80vh;
+}
+
+.show-img img{
+  height: 100%;
 }
