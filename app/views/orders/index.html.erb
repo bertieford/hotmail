@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Order index Page</h1>
+  <p>Your orders:</p>
+  <% @orders.each do |order| %>
+    <%= order.id %>
+    <%= order.price %>
+    <hr>
+  <% end %>
+
+  <%= link_to "All Sauces", products_path %>
+</div>
