@@ -1,10 +1,10 @@
 <div class="container">
   <h1><%= @product.name %></h1>
-  <p>Made by: <%= @product.manufacturer %></p>
-  <p>Description: <%= @product.description %></p>
-  <p>Ingredients:<%= @product.ingredients %></p>
-  <p>Size: <%= @product.bottle_size %></p>
-  <p>Price: £<%= @product.price %></p>
+  <p><strong>Made by:</strong> <%= @product.manufacturer %></p>
+  <p><strong>Description:</strong> <%= @product.description %></p>
+  <p><strong>Ingredients:</strong><%= @product.ingredients %></p>
+  <p><strong>Size:</strong> <%= @product.bottle_size %></p>
+  <p><strong>Price:</strong> £<%= @product.price %></p>
 
   <%= link_to "All Sauces", products_path %>
   <%= link_to "Edit Sauce", edit_product_path(@product) %>
