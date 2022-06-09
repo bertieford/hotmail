@@ -2,11 +2,13 @@
 /* FOOTER */
 
 .footer {
-  text-align: center;
+  text-align: left;
   padding: 32px;
   background-color: #f4f4f6;
   text-decoration: none;
   color: #f4f4f6;
+  line-height: 10px;
+  padding-left: 5%;
 }
 
 .footer a {
@@ -20,4 +22,8 @@ a:hover {
 
 .footer p {
   color: gray;
+}
+
+#made {
+  font-size: 10px;
 }
