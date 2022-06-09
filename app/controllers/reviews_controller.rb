@@ -3,10 +3,10 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-    # @review.user = current_user
+    @review.user = current_user
     @review.product = @product
     if @review.save
-      render product_path(@product)
+      redirect_to product_path(@product)
     else
       render :new, status: :unprocessable_entity
     end
