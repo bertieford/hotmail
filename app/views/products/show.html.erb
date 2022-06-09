@@ -13,6 +13,13 @@
       <p><strong>Ingredients: </strong><%= @product.ingredients %></p>
       <p><strong>Size:</strong> <%= @product.bottle_size %></p>
       <p><strong>Price:</strong> £<%= @product.price %></p>
+
+      <p><strong>Review this product</strong></p>
+      <%= simple_form_for [@product, @review] do |f| %>
+        <%= f.input :content, as: :text %>
+        <%= f.input :rating, collection: (1..5).to_a, label: "Rate The Sauce" %>
+        <%= f.submit "Submit" %>
+      <% end %>
     </div>
     <div class="show-img">
       <img src="//cdn.shopify.com/s/files/1/2086/9287/products/NuggetHoney11.jpg?v=1616537010&width=680" alt="">

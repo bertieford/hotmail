@@ -1,9 +1,12 @@
 class ReviewsController < ApplicationController
   before_action :set_product, only: [:create]
+
   def create
     @review = Review.new(review_params)
-    @review.user = current_user
-    if review.save
+    # @user = current_user
+    # @review.user = @user
+    @review.product = @product
+    if @review.save
       render product_path(@product)
     else
       render :new, status: :unprocessable_entity
