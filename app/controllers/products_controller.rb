@@ -15,6 +15,7 @@ class ProductsController < ApplicationController
 
   def show
     @order_product = OrderProduct.new
+    @review = Review.new
   end
 
   def index
