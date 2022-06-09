@@ -1,0 +1,112 @@
+body {
+  background-color: #ebebeb;;
+}
+
+// h1 {
+//   color: #1B2432;
+//   text-align: center;
+//   padding-top: 50px;
+//   font-size: 100px;
+// }
+
+// h2 {
+//   text-align: center;
+//   font-size: 50px;
+// }
+
+// p {
+//   font-size: 24px;
+// }
+
+.logboxs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  padding-top: 8px;
+}
+
+.logbox {
+  width: 14%;
+  border-radius: 10px;
+  text-align: center;
+  width: 33%;
+  height: 100%;
+}
+
+#signin {
+  text-align: left;
+  background-color: #1B2432;
+  color: #E9E9ED;
+  padding: 1.25em;
+}
+
+// .btn {
+//   color: #ee8534;
+//   font-size: 70px;
+// }
+
+// .btn:hover {
+//   color: #1EDD88;
+// }
+
+input#email {
+  height: 24px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+input#pwd {
+  height: 24px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+
+.signbutton {
+    background-color:#ee8534;
+    border-radius:28px;
+    display:inline-block;
+    cursor:pointer;
+    color:#f4f4f6;
+    font-family:Arial;
+    font-size:17px;
+    font-weight:bold;
+    padding:16px 55px;
+    text-decoration:none;
+  }
+  .signbutton:hover {
+    background-color:#b01a1a;
+
+  }
+  .signbutton:active {
+    position:relative;
+    top:1px;
+  }
+
+
+#new {
+  text-align: left;
+  background-color: #F4F4F6;
+  padding: 1.25em;
+}
+
+.logbutton {
+  background-color:#ee8534;
+  border-radius:28px;
+  display:inline-block;
+  cursor:pointer;
+  color:#f4f4f6;
+  font-family:Arial;
+  font-size:17px;
+  font-weight:bold;
+  padding:16px 55px;
+  text-decoration:none;
+}
+.logbutton:hover {
+  background-color:#1EDD88;
+  color: #f4f4f6;
+}
+.logbutton:active {
+  position:relative;
+  top:1px;
+}
