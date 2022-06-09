@@ -3,8 +3,7 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-    # @user = current_user
-    # @review.user = @user
+    # @review.user = current_user
     @review.product = @product
     if @review.save
       render product_path(@product)
