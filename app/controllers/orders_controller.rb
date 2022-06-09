@@ -16,7 +16,6 @@ class OrdersController < ApplicationController
   def show
     @orders = Order.where(user: current_user)
     @order = Order.find(params[:id]) # how does show page know which order is the live one?
-    @products = @order.products # how is an order locating lots of products? via lots of joins tables..?
   end
 
   def add_to_basket
