@@ -5,6 +5,8 @@
     Order Number: <%= order.id %>
     <br>
     Total Cost: <%= order.price %>
+    <br>
+    <%= link_to "Go to this order", order_path(order) %>
     <hr>
   <% end %>
 
