@@ -9,8 +9,6 @@
   text-transform: uppercase;
 }
 
-
-
 .box {
   color: #1B2432;
 }
@@ -19,13 +17,14 @@
   background-color: #1B2432;
   color: #f4f4f6;
   width: 100%;
+  padding-bottom: 2%;
 }
 
 .blue_dark h1 {
   padding-top: 50px;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-right: 42%;
   font-size: 56px;
+  color: #f4f4f6;
 }
 
 .blue_dark p {
@@ -77,4 +76,13 @@
   font-weight: bold;
   margin-left: 5%;
   margin-right: 30%;
+}
+
+.button:hover {
+  background-color:#1EDD88;
+  color: #1b2432;
+}
+.logbutton:active {
+  position:relative;
+  top:1px;
 }

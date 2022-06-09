@@ -9,17 +9,24 @@
   margin: auto;
 }
 
-.cards {
+.tests {
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
   padding-top: 8px;
 }
 
-.card {
+.test {
   width: 32%;
-  border-radius: 3px;
   text-align: center;
   padding: 20px;
   border: 1px solid rgb(230,230,230);
+  background-color: white;
+}
+
+#head {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  padding-bottom: 24px;
 }
