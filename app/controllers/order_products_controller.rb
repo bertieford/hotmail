@@ -1,4 +1,17 @@
 class OrderProductsController < ApplicationController
+  before_action :set_order_product, only: %i[edit update destroy]
+
+  def show
+    @order_product = OrderProduct.find(params[:id])
+  end
+
+  def edit
+
+  end
+
+  def update
+
+  end
 
   def create
     # DEFINING THE ORDER
@@ -29,5 +42,18 @@ class OrderProductsController < ApplicationController
     else
       render "products" # can check / amend this
     end
+  end
+
+  def destroy
+    @orders = Order.where(user: current_user)
+    @order = Order.find(params[:id])
+    @order_product.destroy
+    redirect_to order_path, status: :see_other
+  end
+
+  private
+
+  def set_order_product
+    @order_product = OrderProduct.find(params[:id])
   end
 end

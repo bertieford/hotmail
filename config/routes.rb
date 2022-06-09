@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :products do
-    resources :order_products, only: [:create]
+    resources :order_products
   end
   # get "products/:id/add_to_basket", to: "orders#add_to_basket", as: :additem
   resources :orders
