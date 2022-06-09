@@ -1,46 +1,85 @@
- /* NAVBAR STYLING STARTS */
-.navbar {
-  display: flex;
-  align-items: center;
+//  /* NAVBAR STYLING STARTS */
+// .navbar {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   padding: 11px;
+//   background-color: #f4f4f6;
+//   color: #1B2432;
+//   padding-left: 5%;
+//   padding-right: 5%;
+//   padding-top: 1.5em;
+// }
+
+//  .nav-links a {
+//   color: #1B2432;
+//  }
+//  /* LOGO */
+//  .logo {
+//   font-size: 32px;
+//  }
+
+//  /* NAVBAR MENU */
+//  .menu {
+//   display: flex;
+//   gap: 1em;
+//   font-size: 18px;
+//   font-weight: bold;
+//   text-transform: uppercase;
+//  }
+
+//  .menu :hover {
+//    color: #EE8434;
+//  }
+
+//  .menu li:hover {
+//   transition: 0.3s ease;
+//  }
+//  .menu li {
+//   padding: 5px 14px;
+//  }
+
+//  .sticky {
+//   position: fixed;
+//   top: 0;
+//   width: 100%;
+// }
+
+.navbar-lewagon {
   justify-content: space-between;
-  padding: 11px;
-  background-color: #f4f4f6;
-  color: #1B2432;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 1.5em;
+  background: white;
 }
 
- .nav-links a {
-  color: #1B2432;
- }
- /* LOGO */
- .logo {
-  font-size: 32px;
- }
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
 
- /* NAVBAR MENU */
- .menu {
-  display: flex;
-  gap: 1em;
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
- }
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
 
- .menu :hover {
-   color: #EE8434;
- }
+// Avatar
 
- .menu li:hover {
-  transition: 0.3s ease;
- }
- .menu li {
-  padding: 5px 14px;
- }
+.avatar {
+  width: 40px;
+  border-radius: 50%;
+}
 
- .sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
+.avatar-large {
+  width: 56px;
+  border-radius: 50%;
+}
+
+.avatar-bordered {
+  width: 40px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
+}
+
+.avatar-square {
+  width: 40px;
+  border-radius: 0px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
 }
