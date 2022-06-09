@@ -29,7 +29,7 @@
   <% @product.reviews.each do |review| %>
     <p>Reviewed by: <%= review.user.first_name %></p>
     <p>They said: <%= review.content %></p>
-    <p><%= review.rating %></p>
+    <p><%= review.rating %>/5</p>
   <% end %>
   <%= link_to "All Sauces", products_path, class:"btn btn-primary"%>
   <%= link_to "Edit Sauce", edit_product_path(@product), class:"btn btn-primary"%>
