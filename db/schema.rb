@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_08_140713) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_09_101442) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -29,6 +29,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_08_140713) do
     t.string "price"
     t.boolean "complete"
     t.bigint "user_id", null: false
+    t.bigint "order_products_id"
+    t.index ["order_products_id"], name: "index_orders_on_order_products_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
@@ -41,6 +43,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_08_140713) do
     t.string "price"
     t.text "ingredients"
     t.string "bottle_size"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text "content"
+    t.integer "rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
+    t.bigint "product_id", null: false
+    t.index ["product_id"], name: "index_reviews_on_product_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -65,5 +78,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_08_140713) do
 
   add_foreign_key "order_products", "orders"
   add_foreign_key "order_products", "products"
+  add_foreign_key "orders", "order_products", column: "order_products_id"
   add_foreign_key "orders", "users"
+  add_foreign_key "reviews", "products"
+  add_foreign_key "reviews", "users"
 end
