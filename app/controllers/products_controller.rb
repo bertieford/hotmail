@@ -19,7 +19,11 @@ class ProductsController < ApplicationController
   end
 
   def index
-    @products = Product.all
+    if params[:query].present?
+      @products = Product.search_by_name(params[:query])
+    else
+      @products = Product.all
+    end
   end
 
   def edit

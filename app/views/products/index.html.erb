@@ -1,5 +1,13 @@
 <div class="container">
-  <h1 class="m-5">Our Sauces</h1>
+  <h1 class="mt-5 mb-3">Our Sauces</h1>
+  <%= form_tag products_path, method: :get, class: "d-flex pb-3" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a sauce"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
   <div class="grid pb-3">
     <% @products.each do |product| %>
       <%= link_to product_path(product) do %>
