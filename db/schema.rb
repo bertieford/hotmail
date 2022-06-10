@@ -56,7 +56,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_10_111333) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "complete"
-    t.float "price", default: 0.0
+    t.float "price"
     t.bigint "user_id", null: false
     t.bigint "order_products_id"
     t.index ["order_products_id"], name: "index_orders_on_order_products_id"
