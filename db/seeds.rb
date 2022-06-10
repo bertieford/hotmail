@@ -31,6 +31,13 @@ sauce5 = Product.create!(name: "Tears of the Sun Private Reserve Hot Sauce", des
 file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/TEARS.jpg?v=1616536993&width=680")
 sauce5.photo.attach(io: file, filename: "Tears_image", content_type: "image/png")
 
+sauce6 = Product.create!(name: "Honey Badger Hot Sauce", description: "The crew at Torchbearer know how to up the heat without sacrificing flavor, and this sauce’s potent mix of Scorpion peppers and Carolina Reapers combined with honey and mustard is all the proof you’ll need. Like a souped up version of the honey mustard you dunked your chicken nuggets in as a kid (no judgements if you never stopped), this sauce is another testament to Torchbearer’s deft use of craveable flavors, big heat and their signature silky smooth texture. Pepper heads will enjoy this with chicken tenders, roast pork, and crispy brussel sprouts. ", manufacturer: "Torchbearer Sauces", price: 14.00, ingredients: "Apple cider vinegar, Scorpion pepper, honey, distilled white vinegar, water, canola oil, brown sugar, mustard powder, Carolina Reaper pepper, white sugar, cayenne pepper powder, black pepper, turmeric, mustard seed, granulated garlic, salt, garlic ", bottle_size: "5oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/honeybadger.jpg?v=1616537141&width=680")
+sauce6.photo.attach(io: file, filename: "Honeybadger_image", content_type: "image/png")
+
+sauce7 = Product.create!(name: "Bhutila Fire Hot Sauce", description: "Our first hot sauce from Honduras is bringing tropical heat to the #7 wing on Hot Ones Season 16! Featuring a smoked version of the Caribbean’s favorite pepper, the Scotch bonnet, as well as Chocolate Ghost peppers, Bhutila gets its name from an island off the coast of Honduras. And it’s a fire you can feel good about - a portion of all sales goes to protecting their coral reef! Completed with bitter orange for fruity and citrus notes, it’s delicious with beans and rice, guacamole or as a marinade for carne asada. ", manufacturer: "Chile Lengua de Fuego", price: 14.00, ingredients: "Apple cider vinegar, ghost peppers + mixed peppers, sea salt, garlic", bottle_size: "5oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/hotones-bhutilafire-hotsauce.jpg?v=1631222766&width=680")
+sauce7.photo.attach(io: file, filename: "Bhutila_image", content_type: "image/png")
 
 puts "Products created"
 puts "Deleting Users"
