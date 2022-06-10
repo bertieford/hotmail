@@ -19,7 +19,11 @@ class ProductsController < ApplicationController
   end
 
   def index
-    @products = Product.all
+    if params[:query].present?
+      @products = Product.search_by_name(params[:query])
+    else
+      @products = Product.all
+    end
   end
 
   def edit
@@ -46,7 +50,7 @@ class ProductsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:name, :description, :ingredients, :bottle_size, :manufacturer, :price)
+    params.require(:product).permit(:name, :description, :ingredients, :bottle_size, :manufacturer, :price, :photo)
   end
 
 end
