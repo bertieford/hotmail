@@ -16,17 +16,19 @@ class OrdersController < ApplicationController
   def show
     @orders = Order.where(user: current_user)
     @order = Order.find(params[:id]) # how does show page know which order is the live one?
+    @products = @order.products
+    @order_products = OrderProduct.all.order('created_at DESC')
   end
 
-  def add_to_basket
-    if !current_user.orders.empty?
-      if current_user.orders.last.complete
-        create
-      end
-    end
-    @product = Product.find(params[:id])
-    redirect_to  product_order_products_path(@product)
-  end
+  # def add_to_basket
+  #   if !current_user.orders.empty?
+  #     if current_user.orders.last.complete
+  #       create
+  #     end
+  #   end
+  #   @product = Product.find(params[:id])
+  #   redirect_to  product_order_products_path(@product)
+  # end
     # @product = Product.find(params[:id])
     # fetch the order which is opened
     # will create new order_product and assign it the order id and product id.
