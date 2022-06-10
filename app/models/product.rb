@@ -8,5 +8,12 @@ class Product < ApplicationRecord
   validates :bottle_size, presence: true
   validates :manufacturer, presence: true
   validates :price, presence: true
-#  has_one_attached :photo
+  #  has_one_attached :photo
+
+  include PgSearch::Model
+  pg_search_scope :search_by_name,
+    against: [ :name ],
+    using: {
+      tsearch: { prefix: true } # <-- now `superman batm` will return something!
+    }
 end
