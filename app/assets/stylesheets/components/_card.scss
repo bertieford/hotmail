@@ -34,8 +34,9 @@
 }
 
 a{
-  text-decoration: none;
   color: #1b2432;
+  text-decoration: none;
+  text-align: center;
 }
 
 .card-trip .card-trip-infos {
@@ -50,6 +51,32 @@ a{
 .card-title {
   height: 40px;
 }
+
+
+.cardButton {
+	background: linear-gradient(to bottom, #ee8534 5%, #ff8b38 100%);
+	background-color: #ee8534;
+	border-radius: 28px;
+	display:inline-block;
+	cursor:pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 17px;
+	font-weight: bold;
+	padding: 11px 24px;
+	text-decoration:none;
+}
+
+.cardButton:hover {
+	background:linear-gradient(to bottom, #ff8b38 5%, #ee8534 100%);
+	background-color:#ff8b38;
+}
+.cardButton:active {
+	position:relative;
+	top:1px;
+}
+
+
 
 // SHOW PAGE CARD
 .show-card{
