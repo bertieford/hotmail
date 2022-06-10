@@ -22,7 +22,7 @@
       <% end %>
     </div>
     <div class="show-img">
-      <img src="//cdn.shopify.com/s/files/1/2086/9287/products/NuggetHoney11.jpg?v=1616537010&width=680" alt="">
+      <%= cl_image_tag @product.photo.key %>
     </div>
   </div>
   <p class="py-3"><strong>Reviews</strong></p>
