@@ -12,36 +12,43 @@ class OrderProductsController < ApplicationController
   end
 
   def update
+    @order = @order_product.order
     if params[:commit] == "UP"
       @order_product.qty += 1
       @order_product.save
       redirect_to order_path(@order_product.order)
+      @order.price += @order_product.product.price
+      @order.save!
     elsif params[:commit] == "DOWN"
       @order_product.qty -= 1
       @order_product.save
       redirect_to order_path(@order_product.order)
+      @order.price -= @order_product.product.price
+      @order.save!
     end
   end
 
   def create
+    # DEFINING THE PRODUCT
+    @product = Product.find(params[:product_id])
     # DEFINING THE ORDER
     if !current_user.orders.empty?
       if current_user.orders.last.complete
         @order = Order.new
-        @order.price = "price goes here"
         @order.user = current_user
+        @order.price += @product.price
         @order.save!
       else
         @order = current_user.orders.last
+        @order.price += @product.price
+        @order.save!
       end
     else
       @order = Order.new
-      @order.price = "price goes here"
       @order.user = current_user
+      @order.price += @product.price
       @order.save!
     end
-    # DEFINING THE PRODUCT
-    @product = Product.find(params[:product_id])
     # EXPLORING IF PRODUCT ALREADY EXISTS IN AN ORDER PRODUCT BELONGING TO THIS ORDER.
     @order_product = OrderProduct.new
     @order_product.product = @product
@@ -60,6 +67,9 @@ class OrderProductsController < ApplicationController
 
   def destroy
     @order_product.destroy!
+    @order = @order_product.order
+    @order.price = @order.price - (@order_product.product.price * @order_product.qty)
+    @order.save!
     redirect_to order_path, status: :see_other
   end
 
