@@ -11,7 +11,7 @@
   <% end %>
   <div class="filter d-flex justify-content-around my-4">
     <button class = "btn btn-light" data-filter-products-target = "filter">Filter <i class="fa-solid fa-chevron-down"></i></button>
-    <%= link_to "All", products_path class:"btn btn-primary" %>
+    <%= link_to "All", products_path, class:"btn btn-primary" %>
     <button class = "btn btn-primary" data-filter-products-target = "pill" data-action = "click->filter-products#filtration">North America</button>
     <button class = "btn btn-primary" data-filter-products-target = "pill" data-action = "click->filter-products#filtration">South America</button>
     <button class = "btn btn-primary" data-filter-products-target = "pill" data-action = "click->filter-products#filtration">South East Asia</button>
