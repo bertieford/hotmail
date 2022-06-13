@@ -15,19 +15,26 @@
       <p><strong>Size:</strong> <%= @product.bottle_size %></p>
       <p>Amount: <%= humanized_money_with_symbol(@product.price) %></p>
 
-      <p><strong>Review this product</strong></p>
+      <% if @product.reviews.count == 0 %>
+        <p><strong>Be the first to review this product</strong></p>
+      <% else %>
+        <p><strong>Review this product</strong></p>
+      <% end %>
       <%= simple_form_for [@product, @review] do |f| %>
         <%= f.input :content, as: :text %>
         <%= f.input :rating, collection: (1..5).to_a, label: "Rate The Sauce" %>
         <%= f.submit "Submit", class:"btn btn-primary" %>
       <% end %>
 
-    <p class="py-3"><strong>Reviews</strong></p>
-    <% @product.reviews.each do |review| %>
-      <p>Reviewed by: <%= review.user.first_name %></p>
-      <p>They said: <%= review.content %></p>
-      <p><%= review.rating %>/5</p>
-    <% end %>
+
+
+      <p class="py-3"><strong>Reviews</strong></p>
+      <% @product.reviews.each do |review| %>
+        <p>Reviewed by: <%= review.user.first_name %></p>
+        <p>They said: <%= review.content %></p>
+        <p><%= review.rating %>/5</p>
+      <% end %>
+
     </div>
     <div class="show-img">
       <%= cl_image_tag @product.photo.key %>
