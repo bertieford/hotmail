@@ -13,7 +13,7 @@
       <p><strong>Ingredients: </strong><%= @product.ingredients %></p>
       <p><strong>Location:</strong> <%= @product.location %></p>
       <p><strong>Size:</strong> <%= @product.bottle_size %></p>
-      <p><strong>Price:</strong> £<%= @product.price %></p>
+      <p>Amount: <%= humanized_money_with_symbol(@product.price) %></p>
 
       <p><strong>Review this product</strong></p>
       <%= simple_form_for [@product, @review] do |f| %>
