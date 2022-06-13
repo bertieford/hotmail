@@ -95,4 +95,12 @@ sauce17 = Product.create!(name: "Evolution Hot Sauce", description: "The newest 
 file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/dabombevolution1.jpg?v=1616536949&width=680")
 sauce17.photo.attach(io: file, filename: "Evolution_image", content_type: "image/png")
 
+LOCATIONS = ["North America", "South America", "South East Asia", "Middle East", "Africa", "European"]
+
+Product.all.each do |product|
+  product.location = LOCATIONS.sample
+  puts "added #{product.location} to #{product.name}"
+  product.save!
+end
+
 puts "DONE"
