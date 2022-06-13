@@ -111,6 +111,34 @@ sauce21 = Product.create!(name: "Original Hot Sauce", manufacturer: "Howler Monk
 file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/2522930348148.jpg?v=1628209450&width=680")
 sauce21.photo.attach(io: file, filename: "HowlerMonkey_image", content_type: "image/png")
 
+sauce22 = Product.create!(name: "Guajillo & Red Jalapeno Hot Sauce", manufacturer: "Humble House", price: 12.00, description: "This third sauce from the San Antonio kitchen of Humble House is a well balanced red jalapeño and fresh garlic masterpiece. The guajillo peppers add a nice sweet touch to this south of the border Sriracha, landing at a solid mild heat level.", ingredients: "Aged chile paste (red jalapeños, fresh garlic, vinegar, guajillo peppers, kosher salt) vinegar, pickled red bell pepper, cane sugar", bottle_size: "9.5oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/838886555657.jpg?v=1628209554&width=680")
+sauce22.photo.attach(io: file, filename: "Guajillo_image", content_type: "image/png")
+
+sauce23 = Product.create!(name: "Ancho & Morita Hot Sauce", manufacturer: "Humble House", price: 12.00, description: "A new crowd favorite here at hot sauce HQ, the Humble House Ancho is a sauce that begs to be squeezed on everything. It's rich and smoky from the mild Morita pepper (a smoked red jalapeño) and slightly sweet from tamarind. This is a BBQ/hot sauce hybrid that works great on rice and beans and grilled meats. Or eggs. Or chicken. Or anything!", ingredients: "Aged tamarind chili paste (raisins, tamarind concentrate, gluten-free soy sauce, balsamic vinegar, Morita chile, ancho chile, kosher salt), vinegar, cane sugar, fresh garlic", bottle_size: "10.4oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/394375069705.jpg?v=1628209506&width=680")
+sauce23.photo.attach(io: file, filename: "Ancho_image", content_type: "image/png")
+
+sauce24 = Product.create!(name: "Hippy Dippy Green Hot Sauce", manufacturer: "Angry Goat Pepper Co", price: 8.00, description: "Angry Goat Pepper Co's Hippy Dippy Green delivers a creamy texture thanks to the mix of avocado and olive oil. Kiwi fruit brings just enough sweetness to balance the jalapeños and serranos, while lime juice brightens up the roasted tomatillos. Great for tacos, salads, sandwiches, and especially chicken!", ingredients: " Fire roasted jalapeño peppers, fire roasted serrano peppers, water, lime juice, fire roasted tomatillos, kiwi fruit, agave nectar, avocado, tequila, olive oil, granulated garlic, sea salt, onion powder, cumin, black pepper, fresh cilantro", bottle_size: "5oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/8190561419362.jpg?v=1628200144&width=680")
+sauce24.photo.attach(io: file, filename: "Hippy_image", content_type: "image/png")
+
+sauce25 = Product.create!(name: "Garlic Reaper Sauce Hot Sauce", manufacturer: "Torchbearer Sauces", price: 16.00, description: "The first ingredient is this hot sauce is Carolina Reaper, and the second ingredient is garlic. Need we say more? This sauce is unlike any other we’ve had on Hot Ones, with a rich oil base that gives it a creamy texture with just enough savory spices to round out that garlic. Try using it as a marinade for chicken or salmon, or add to a roast beef sandwich for an amazing lunchtime treat. Oh and be sure to have this bottle handy the next time you order a pizza...", ingredients: "Carolina Reaper pepper, garlic, canola oil, water, distilled white vinegar, lime juice, granulated garlic, mustard powder, chili powder, salt", bottle_size: "5oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/7944157921378.jpg?v=1628214667&width=680")
+sauce25.photo.attach(io: file, filename: "Guajillo_image", content_type: "image/png")
+
+sauce26 = Product.create!(name: "Fiya! Fiya! Hot Sauce", manufacturer: "Adoboloco", price: 14.00, description: "This newest sauce from Adoboloco stays true to the maker’s Hawaiian roots with a ton of tangy apple cider vinegar but kicks it up a notch with a blend of four hot peppers including ghost, Trinidad scorpion, habanero & jalapeno. Rounded out with sea salt and garlic, Fiya! Fiya! is their hottest yet but is still usable for everyday applications. It’s super versatile, so try it on tacos, eggs, wings, sandwiches and everything in between.", ingredients: "Apple cider vinegar, chili peppers (jalapeno, dried Trinidad scorpion, habanero & ghost), sea salt, garlic ", bottle_size: "5oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/FIYAFIYA_ea4072e4-1c2d-4ef6-b451-3a320e654e91.jpg?v=1628199607&width=680")
+sauce26.photo.attach(io: file, filename: "Fiya_image", content_type: "image/png")
+
+sauce27 = Product.create!(name: "Yuzu Heaven Hot Sauce", manufacturer: "Mellow Habanero", price: 24.00, description: "Friends of the Brooklyn hot sauce shop will recognize Mellow Habanero and our good friend Taku “Habanero Man” Kondo of ta-nm farm in Hyogo, Japan! This HEATONIST exclusive hot sauce combines Tak’s favorite golden habanero peppers with tangy, citrusy yuzu. The bright notes of the yuzu juice awaken the senses, leading the way for powerful up-front heat from the habanero. Balanced with mango and sea salt, it’s a one-of-a-kind sauce that can enliven any dish. Try it as a dipping sauce for sushi, on rice bowls, or mixed with soy sauce as a marinade for chicken or pork. Also delicious in cocktails! ", ingredients: "Organic habanero, rice vinegar, yuzu juice, yuzu peel, organic mango, sea salt", bottle_size: "5oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/YUZU1.jpg?v=1628211120&width=680")
+sauce27.photo.attach(io: file, filename: "Yuzu_image", content_type: "image/png")
+
+sauce28 = Product.create!(name: "", manufacturer: "", price: , description: "", ingredients: "", bottle_size: "oz")
+file = URI.open("")
+sauce28.photo.attach(io: file, filename: "Guajillo_image", content_type: "image/png")
+
 LOCATIONS = ["North America", "South America", "South East Asia", "Middle East", "Africa", "Europe"]
 
 Product.all.each do |product|
