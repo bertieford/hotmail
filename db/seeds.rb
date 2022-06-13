@@ -177,14 +177,18 @@ sauce37 = Product.create!(name: "Goat Rider Hot Sauce", manufacturer: "Angry Goa
 file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/ANGRYGOAT1.jpg?v=1628200179&width=680")
 sauce37.photo.attach(io: file, filename: "Goat_image", content_type: "image/png")
 
-sauce38 = Product.create!(name: "", manufacturer: "", price: , description: "", ingredients: "", bottle_size: "oz")
-file = URI.open("")
-sauce38.photo.attach(io: file, filename: "Guajillo_image", content_type: "image/png")
+sauce38 = Product.create!(name: "Hot Ones Jr. The Green", manufacturer: "Hot Ones Hot Sauce", price: 10.00, description: "The first-ever hot sauce for kids! Inspired by young Hot Ones fans, we set out to create a sauce that lets them live the Hot Ones tradition on the foothills of Mt. Scoville. Featuring the wholesome flavors they crave, a friendly label and easy to use squeeze bottle, Hot Ones Jr. The Green is tart, sweet and has just-there heat that encourages kids to try new foods and get excited about eating! This supermild hot sauce mixes kid-friendly ingredients like green apple and banana with wholesome produce (shhh, there’s spinach in there) and subtle warmth from jalapeño. Formulated with the help of one of Sean Evans’ favorite makers, Queen Majesty, and produced by fan favorite Heartbeat Hot Sauce, you can trust that this squeeze bottle hot sauce is one of the most unique we’ve ever delivered. It’s kids’ new pal for nuggets, PB&J sandwiches, fries, pizza veggies and more. Perfect for your adventurous little eater, your fav niece/nephew, and adults who are just getting into spice. When a sauce tastes this good, trust us - it’s not just for kids!", ingredients: "Green apple, apple juice, sweet onion, lime juice, baby spinach, apple cider vinegar, jalapeño peppers, banana, kosher salt, extra virgin olive oil, fresh basil", bottle_size: "6oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/hotones-Jr-hotsauce.jpg?v=1638173985&width=680")
+sauce38.photo.attach(io: file, filename: "thegreen_image", content_type: "image/png")
 
 
-sauce39 = Product.create!(name: "", manufacturer: "", price: , description: "", ingredients: "", bottle_size: "oz")
+sauce39 = Product.create!(name: "Mezcaline", manufacturer: "Burns and McCoy", price: 12.00, description: "Our first hot sauce with mezcal! The smoky alcohol originating from Oaxaca lends just a subtle earthy heat to this complex hot sauce filled with espresso, cocoa, spices and cinnamon. Tomato and lime juice balance out all the toasty notes with acidity in the same way the fruity heat of orange habaneros balances out earthy dried Chocolate Bhutlah and Chocolate Ghost pepper powder. This may be the #3 sauce in Season 18’s Hot Ones lineup, but watch out for that creeping ghost pepper heat! A must have with tacos, grilled chicken, ribs, and more!  ", ingredients: "Fire roasted tomato (vine ripened tomatoes, tomato juice, salt, and citric acid), red jalapeno mash (peppers, vinegar), water, orange habanero mach (peppers, vinegar), garlic, onion, brown sugar, vinegar, mezcal, olive oil, salt, espresso, rose water, lime juice, cocoa powder, oregano, chocolate bhutlah pepper powder, chocolate ghost pepper powder, thyme, cinnamon", bottle_size: "5oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/HOTONES-SEASON18-Mezcaline.jpg?v=1652725172&width=680")
+sauce39.photo.attach(io: file, filename: "Mezcaline_image", content_type: "image/png")
+
+sauce40 = Product.create!(name: "", manufacturer: "", price: , description: "", ingredients: "", bottle_size: "oz")
 file = URI.open("")
-sauce39.photo.attach(io: file, filename: "Guajillo_image", content_type: "image/png")
+sauce40.photo.attach(io: file, filename: "Guajillo_image", content_type: "image/png")
 
 LOCATIONS = ["North America", "South America", "South East Asia", "Middle East", "Africa", "Europe"]
 
