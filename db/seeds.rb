@@ -95,6 +95,22 @@ sauce17 = Product.create!(name: "Evolution Hot Sauce", description: "The newest 
 file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/dabombevolution1.jpg?v=1616536949&width=680")
 sauce17.photo.attach(io: file, filename: "Evolution_image", content_type: "image/png")
 
+sauce18 = Product.create!(name: "Habanero Hot Sauce", description: "Portland's famous table sauce, Secret Aardvark Habanero's unique Caribbean / Tex-Mex hybrid is made with flavorful Habanero peppers and roasted tomatoes. You'll want to use it on everything, so be careful if you only get one bottle.", manufacturer: "Secret Aardvark Trading Co", price: 12.00, ingredients: "White wine vinegar, roasted tomatoes, habanero peppers, onion, carrot, sugar, prepared mustard, water, kosher salt, cornstarch, herbs & spices", bottle_size: "8oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/460749635593.jpg?v=1628213474&width=680")
+sauce18.photo.attach(io: file, filename: "HabaneroHotSuace_image", content_type: "image/png")
+
+sauce19 = Product.create!(name: "Pineapple & Habanero Hot Sauce", manufacturer: "Bravado Spice Co", price: 10.00, description: "Fresh pineapple dominates this sauce, shining through the habanero heat. Yellow bell pepper lends only a touch of sweetness. A great option for people who like fruit sauces but not overly sweet ones. Goes well with rice & beans, fish dishes, or mixed into a salad", ingredients: "Pineapple, white wine vinegar, yellow bell peppers, habanero, garlic, salt", bottle_size: "5oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/880526524425.jpg?v=1628200986&width=680")
+sauce19.photo.attach(io: file, filename: "PineappleHabaneroHotSauce_image", content_type: "image/png")
+
+sauce20 = Product.create!(name: "Zombie Apocalypse Hot Sauce", manufacturer: "Torchbearer Sauces", price: 10.00, description: "The Zombie Apocalypse Hot Sauce lives up to its name, combining Ghost Peppers and Habaneros with a mix of spices, vegetables, and vinegar to create a slow burning blow torch. Some people will feel the heat right away, but others can take a few minutes for the full impact to set in. The heat can last up to 20 minutes, creating a perfect match between very high heat and amazing flavor. Try it on all your favorite foods - wings, chili, soups, steak or even a sandwich in need of a major kick.", ingredients: "Bhut jolokia peppers, habanero peppers, carrot, mandarin orange, tomatoes, distilled white vinegar, vegetable oil, garlic, sugar, spices", bottle_size: "5oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/374377971721.jpg?v=1628214918&width=680")
+sauce20.photo.attach(io: file, filename: "ZombieApocolypse_image", content_type: "image/png")
+
+sauce21 = Product.create!(name: "Original Hot Sauce", manufacturer: "Howler Monkey", price: 8.00, description: "Howler Monkey Original is a nod to the traditional Panamanian-style hot sauce with a tangy vinegar base and scotch bonnet peppers. Turmeric and garlic are stand-out flavors, making this every-day use sauce truly original. Try it on everything, from eggs to chicken to salads.", ingredients: "Distilled vinegar, red scotch bonnet peppers, garlic, onions, mustard (distilled vinegar, # 1 mustard seed, salt, turmeric, spices), cumin, black pepper, turmeric ", bottle_size: "5oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/2522930348148.jpg?v=1628209450&width=680")
+sauce21.photo.attach(io: file, filename: "HowlerMonkey_image", content_type: "image/png")
+
 LOCATIONS = ["North America", "South America", "South East Asia", "Middle East", "Africa", "Europe"]
 
 Product.all.each do |product|
