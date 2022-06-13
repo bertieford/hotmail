@@ -266,13 +266,13 @@ sauce59 = Product.create!(name: "Year of the Dog", manufacturer: "Lucky Dog Hot 
 file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/doggo.jpg?v=1628210776&width=680")
 sauce59.photo.attach(io: file, filename: "yearofthedog_image", content_type: "image/png")
 
-sauce60 = Product.create!(name: "", manufacturer: "", price: 12, description: "", ingredients: "", bottle_size: "5oz")
-file = URI.open("")
-sauce60.photo.attach(io: file, filename: "Tikka_image", content_type: "image/png")
+sauce60 = Product.create!(name: "Hot Ones Jr. The Yellow", manufacturer: "Hot Ones Hot Sauce", price: 12, description: "Meet the world’s most playful hot sauce! After the love we received for Hot Ones Jr. The Green we had to make it a slightly-spicier best friend. The Yellow is a juicy mix of tropical pineapple, mango and just a few Scotch Bonnet peppers. To all the parents who reached out and left reviews that their small spice lover enjoyed The Green but could handle more heat - heard! Made with wholesome fruits and vegetables with no added sugar, The Yellow is packed with flavors kids love and parents can feel good about. Great for nieces, nephews, mini-mes and also adults who are new to spice. Try it on sandwiches, rotisserie chicken, quesadillas, fish sticks and make snack time as fun as summer vacation! ", ingredients: "Yellow bell peppers, pineapple, mango, onion, distilled vinegar, lime juice, Scotch Bonnet peppers, salt, olive oil, garlic, turmeric, ginger", bottle_size: "6oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/hotones-theyellow-hotsauce.jpg?v=1650308626&width=680")
+sauce60.photo.attach(io: file, filename: "yellowone_image", content_type: "image/png")
 
-sauce61 = Product.create!(name: "", manufacturer: "", price: 12, description: "", ingredients: "", bottle_size: "5oz")
-file = URI.open("")
-sauce61.photo.attach(io: file, filename: "Tikka_image", content_type: "image/png")
+sauce61 = Product.create!(name: "Dill Pickle Serrano Hot Sauce", manufacturer: "Heartbeat Hot Sauce", price: 12, description: "Pickle hot sauces are having a moment, and this new recipe from the Heartbeat crew is kind of a big dill. A funky cross between a dill-brined cuke and pickled jalapeno, it’s sour, juicy, garlicky with a herby hit of dill and a welcome hint of serrano heat. Its mild spice level makes it enjoyable by all, and a great starter sauce. Try it on anything that needs pickley acid flavor: burgers and dogs, sandwiches, deviled eggs, even mac & cheese, or a classic Canadian Bloody Caesar (or Bloody Mary, if you prefer)! ", ingredients: "Vinegar, onion, jalapeno, cucumber, serrano pepper, salt, garlic, dill, canola oil, spices, mustard seed", bottle_size: "6oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/heartbeat-dill-pickle-saucecopy.jpg?v=1627335268&width=680")
+sauce61.photo.attach(io: file, filename: "Dillpickle_image", content_type: "image/png")
 
 LOCATIONS = ["North America", "South America", "South East Asia", "Middle East", "Africa", "Europe"]
 
