@@ -26,6 +26,13 @@
       <%= cl_image_tag @product.photo.key %>
     </div>
   </div>
+  <div class="related-products mt-5">
+    <% @relatedproducts.each do |product| %>
+    <div class="related-card" style="background-image: url('<%= cl_image_path product.photo.key %>');">
+      <p class="related-title"><%= product.name %> </p>
+    </div>
+    <% end %>
+  </div>
   <p class="py-3"><strong>Reviews</strong></p>
   <% @product.reviews.each do |review| %>
     <p>Reviewed by: <%= review.user.first_name %></p>
