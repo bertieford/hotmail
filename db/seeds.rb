@@ -135,9 +135,21 @@ sauce27 = Product.create!(name: "Yuzu Heaven Hot Sauce", manufacturer: "Mellow H
 file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/YUZU1.jpg?v=1628211120&width=680")
 sauce27.photo.attach(io: file, filename: "Yuzu_image", content_type: "image/png")
 
-sauce28 = Product.create!(name: "", manufacturer: "", price: , description: "", ingredients: "", bottle_size: "oz")
+sauce28 = Product.create!(name: "California Raisin Hot Sauce", manufacturer: "Small Axe Peppers", price: 10.00, description: "Oakland California Raisin honors beautiful local ingredients from the newest community gardens in Small Axe Pepper Co’s network. Sourcing jalapenos and serranos grown across Oakland, Small Axe blends them with another classic California export, sun-dried raisins. Breaking out of their boring red box, the raisins provide bold sweetness that is well balanced with carrots, garlic and paprika for a subtle smoky aftertaste. We love this one as a glaze on pork or chicken, and for homemade picadillo!", ingredients: "Apple cider vinegar, jalapeno peppers, serrano peppers, raisins, garlic, carrots, salt, brown sugar, smoked paprika", bottle_size: "5oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/Caliraisin1.jpg?v=1628213902&width=680")
+sauce28.photo.attach(io: file, filename: "CaliRaisin_image", content_type: "image/png")
+
+sauce29 = Product.create!(name: "Chipotle & Habanero Hot Sauce", manufacturer: "Fresco Sauce", price: 10.00, description: "Citrusy orange habaneros combine with smoky chipotles and bold garlic for your new go-to table sauce. A touch of added sugar plays to the fruit notes of the habanero to balance the whole thing out, then a quick blend with some olive oil enriches the texture and gives body. This highly versatile sauce adds depth to lean proteins like grilled chicken and also shines on burgers, or when used as a dip with fries! ", ingredients: "Habanero peppers, chipotle chili powder, carrots, distilled vinegar, olive oil, garlic, salt, sugar, black pepper, water", bottle_size: "5oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/Frescosauce.jpg?v=1628203950&width=680")
+sauce29.photo.attach(io: file, filename: "ChipotleHabanero_image", content_type: "image/png")
+
+sauce30 = Product.create!(name: "Maui No Ka Oi Hot Sauce", manufacturer: "Adoboloco", price: 10.00, description: "Everyone’s favorite Hawaiin sauce maker is back with an ode to the Valley Isle, Maui No Ka ‘Oi. In this scorcher, puckery apple cider vinegar splashes onto the palate before a wave of Trinidad Moruga Scorpion pepper heat crashes over you. The citrus-y notes from the Trini peppers add bright, tropical tones that pair perfectly with a bit of sea salt. At a solid 7.5 out of 10, this sauce will leave you feeling the Hawaiin heat. This versatile recipe could grace anything from an italian hero, to fish and chips, to cauliflower wings.", ingredients: "Apple cider vinegar, Trinidad Moruga Scorpion peppers, sea salt, garlic", bottle_size: "5oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/Mauiadoboloco.jpg?v=1628199898&width=680")
+sauce30.photo.attach(io: file, filename: "Maui_image", content_type: "image/png")
+
+sauce31 = Product.create!(name: "", manufacturer: "", price: , description: "", ingredients: "", bottle_size: "oz")
 file = URI.open("")
-sauce28.photo.attach(io: file, filename: "Guajillo_image", content_type: "image/png")
+sauce31.photo.attach(io: file, filename: "Guajillo_image", content_type: "image/png")
 
 LOCATIONS = ["North America", "South America", "South East Asia", "Middle East", "Africa", "Europe"]
 
