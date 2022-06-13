@@ -1,6 +1,7 @@
-<div class="container">
+<div class="container" data-controller = "filter-products">
   <h1 class="mt-5 mb-3">Our Sauces</h1>
-  <%= form_tag products_path, method: :get, class: "d-flex pb-3" do %>
+  <%= form_tag products_path, method: :get, class: "d-flex pb-3", html: { data: {
+        filter_products_target:"form"}} do %>
     <%= text_field_tag :query,
       params[:query],
       class: "form-control",
@@ -8,29 +9,17 @@
     %>
     <%= submit_tag "Search", class: "btn btn-primary" %>
   <% end %>
-  <div class="grid pb-3">
-    <% @products.each do |product| %>
-      <%= link_to product_path(product) do %>
-      <div class="card-trip">
-      <% if product.photo.attached?%>
-        <%= cl_image_tag product.photo.key %>
-      <% else %>
-        <img src="https://www.web2ink.com/wp-content/uploads/2020/03/coming-soon-advantage-plan..jpg" alt="">
-      <% end %>
-          <div class="card-infos">
-            <div class="card-title p-3">
-              <h2><%= product.name %> | <%= product.manufacturer %></h2>
-            </div>
-            <div class="p-3 d-flex justify-content-between flex-end">
-              <%# <%= link_to "Learn More", product_path(product) %>
-              <p>£<%= product.price %></p>
-            </div>
-            <div id="cardButton"></div>
-          </div>
-      </div>
-      <% end %>
-    <% end %>
+  <div class="filter d-flex justify-content-around my-4">
+    <button class = "btn btn-light" data-filter-products-target = "filter">Filter <i class="fa-solid fa-chevron-down"></i></button>
+    <%= link_to "All", products_path class:"btn btn-primary" %>
+    <button class = "btn btn-primary" data-filter-products-target = "pill" data-action = "click->filter-products#filtration">North America</button>
+    <button class = "btn btn-primary" data-filter-products-target = "pill" data-action = "click->filter-products#filtration">South America</button>
+    <button class = "btn btn-primary" data-filter-products-target = "pill" data-action = "click->filter-products#filtration">South East Asia</button>
+    <button class = "btn btn-primary" data-filter-products-target = "pill" data-action = "click->filter-products#filtration">Europe</button>
+    <button class = "btn btn-primary" data-filter-products-target = "pill" data-action = "click->filter-products#filtration">Middle East</button>
+    <button class = "btn btn-primary" data-filter-products-target = "pill" data-action = "click->filter-products#filtration">Africa</button>
   </div>
+  <%= render "list", products: @products %>
   <% if current_user.admin == true %>
   <%= link_to "Create Sauce", new_product_path, class:"btn btn-primary" %>
   <% end %>

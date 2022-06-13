@@ -21,8 +21,14 @@ class ProductsController < ApplicationController
   def index
     if params[:query].present?
       @products = Product.search_by_name(params[:query])
+    elsif params[:location]
+      @products = Product.where("location ILIKE ?", "%#{params[:location]}%")
     else
       @products = Product.all
+    end
+    respond_to do |format|
+      format.html # Follow regular flow of Rails
+      format.text { render partial: "products/list", locals: {products: @products}, formats: [:html] }
     end
   end
 
