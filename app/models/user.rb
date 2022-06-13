@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :orders, dependent: :destroy
+  has_many :checkouts
   # validates :first_name, presence: true
   validates :email, presence: true
   # Include default devise modules. Others available are:

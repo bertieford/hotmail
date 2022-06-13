@@ -9,6 +9,7 @@ class Product < ApplicationRecord
   validates :manufacturer, presence: true
   validates :price, presence: true
   has_one_attached :photo
+  monetize :price_cents
 
   include PgSearch::Model
   pg_search_scope :search_by_name,

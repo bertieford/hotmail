@@ -4,7 +4,7 @@
   <% @orders.each do |order| %>
     Order Number: <%= order.id %>
     <br>
-    Total Cost: <%= order.price %>
+    Total Cost: <%= order.amount %>
     <br>
     <%= link_to "Go to this order", order_path(order) %>
     <hr>

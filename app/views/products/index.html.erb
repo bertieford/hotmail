@@ -23,7 +23,7 @@
             </div>
             <div class="p-3 d-flex justify-content-between flex-end">
               <%# <%= link_to "Learn More", product_path(product) %>
-              <p>£<%= product.price %></p>
+              <p>Amount: <%= humanized_money_with_symbol(product.price) %></p>
             </div>
             <div id="cardButton"></div>
           </div>
