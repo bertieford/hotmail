@@ -1,0 +1,23 @@
+<div class="grid pb-3" data-filter-products-target = "list">
+    <% products.each do |product| %>
+      <%= link_to product_path(product) do %>
+      <div class="card-trip">
+      <% if product.photo.attached?%>
+        <%= cl_image_tag product.photo.key %>
+      <% else %>
+        <img src="https://www.web2ink.com/wp-content/uploads/2020/03/coming-soon-advantage-plan..jpg" alt="">
+      <% end %>
+          <div class="card-infos">
+            <div class="card-title p-3">
+              <h2><%= product.name %> | <%= product.manufacturer %></h2>
+            </div>
+            <div class="p-3 d-flex justify-content-between flex-end">
+              <%# <%= link_to "Learn More", product_path(product) %>
+              <p>£<%= product.price %></p>
+            </div>
+            <div id="cardButton"></div>
+          </div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
