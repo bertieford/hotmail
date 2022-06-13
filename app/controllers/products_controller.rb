@@ -16,6 +16,8 @@ class ProductsController < ApplicationController
   def show
     @order_product = OrderProduct.new
     @review = Review.new
+
+    @relatedproducts = Product.where(location: @product.location).first(4)
   end
 
   def index

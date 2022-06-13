@@ -1,0 +1,19 @@
+.related-card {
+  width: 12rem;
+  height: 18rem;
+
+  background-size: contain;
+}
+
+.related-card img {
+  width: 220px;
+}
+
+.related-products {
+  display: flex;
+  justify-content: space-around;
+}
+
+.related-title {
+  background-color: white;
+}
