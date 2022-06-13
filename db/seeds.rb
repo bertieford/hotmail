@@ -190,6 +190,22 @@ sauce40 = Product.create!(name: "Cosmic Dumpling Hot Sauce", manufacturer: "Karm
 file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/cosmic-dumpling.jpg?v=1622751529&width=680")
 sauce40.photo.attach(io: file, filename: "CosmicDumpling_image", content_type: "image/png")
 
+sauce41 = Product.create!(name: "", manufacturer: "", price: 12, description: "", ingredients: "", bottle_size: "5oz")
+file = URI.open("")
+sauce41.photo.attach(io: file, filename: "CosmicDumpling_image", content_type: "image/png")
+
+sauce42 = Product.create!(name: "", manufacturer: "", price: 12, description: "", ingredients: "", bottle_size: "5oz")
+file = URI.open("")
+sauce42.photo.attach(io: file, filename: "CosmicDumpling_image", content_type: "image/png")
+
+sauce43 = Product.create!(name: "", manufacturer: "", price: 12, description: "", ingredients: "", bottle_size: "5oz")
+file = URI.open("")
+sauce43.photo.attach(io: file, filename: "CosmicDumpling_image", content_type: "image/png")
+
+sauce44 = Product.create!(name: "", manufacturer: "", price: 12, description: "", ingredients: "", bottle_size: "5oz")
+file = URI.open("")
+sauce44.photo.attach(io: file, filename: "CosmicDumpling_image", content_type: "image/png")
+
 LOCATIONS = ["North America", "South America", "South East Asia", "Middle East", "Africa", "Europe"]
 
 Product.all.each do |product|
