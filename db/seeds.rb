@@ -147,9 +147,44 @@ sauce30 = Product.create!(name: "Maui No Ka Oi Hot Sauce", manufacturer: "Adobol
 file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/Mauiadoboloco.jpg?v=1628199898&width=680")
 sauce30.photo.attach(io: file, filename: "Maui_image", content_type: "image/png")
 
-sauce31 = Product.create!(name: "", manufacturer: "", price: , description: "", ingredients: "", bottle_size: "oz")
+sauce31 = Product.create!(name: "Keith's Chicken Sauce", manufacturer: "Keith's", price: 12.00, description: "Keith Habersberger of The Try Guys is known for his love of fried chicken, especially buffalo wings and ranch. When he challenged HEATONIST to come up with a new hot sauce flavor concept this was a natural place to start. The resulting Keith’s Chicken Sauce channels iconic ranch flavors with dill, parsley, and chives, but sweetens them up with smoked onions, garlic scapes, and Vermont maple syrup. Vinegar, zippy serrano peppers and roasted red pepper add tang while sour cream powder adds a creamy texture that makes this a must-have condiment. Perfect on chicken of all kinds, this sauce cuts through rich foods like fries or a grilled cheese with ease. A must try on pizza!", ingredients: "Organic distilled vinegar, serrano peppers, maple wood smoked onions, pure Vermont maple syrup, garlic scapes, roasted red peppers ( red peppers, water, salt, citric acid) sunflower oil, sour cream powder ( sour cream powder cream cultures and lactic acid, cultured nonfat milk solids, citric acid) salt, dill, parsley, chives, black pepper
+
+CONTAINS MILK", bottle_size: "5oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/Keith_shotsauce.jpg?v=1628210167&width=680")
+sauce31.photo.attach(io: file, filename: "KChicken_image", content_type: "image/png")
+
+sauce32 = Product.create!(name: "Headless Horseradish Hot Sauce ", manufacturer: "Torchbearer Sauces", price: 14.00, description: "The Torchbearer team has a knack for crafting sauces that are outright addictive in terms of flavor and heat with a rich, craveable texture. This sauce features zippy, nostril-tickling horseradish as well as garlic, dry mustard and lemon that cut through the creamy texture and intense ghost pepper heat. Use it as a spread on a steak sandwich or as the best-ever dip for fries. ", ingredients: "Horseradish, ghost chili pepper, garlic, canola oil, water, chipotle peppers, lemon juice, distilled white vinegar, dijon mustard, horseradish powder, salt, chili powder, black pepper", bottle_size: "5oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/headlesshorse.jpg?v=1628214754&width=680")
+sauce32.photo.attach(io: file, filename: "HeadlessHorseradish_image", content_type: "image/png")
+
+sauce33 = Product.create!(name: "Burn After Eating Hot Sauce", manufacturer: "Karma Sauce", price: 18.00, description: "Gene from Karma Sauce Co always comes up with unique flavor combinations and this is no exception. For Burn After Eating he sourced ajwain, a spice used in Indian cuisine that has a uniquely earthy and bitter flavor. With a secret combination of super-hot peppers including ghost, 7-Pot and scorpion, the sauce’s intense heat stands up to this bold spice mix and makes it a perfect accompaniment to the first soups of the season, or an intense slice of pizza.", ingredients: "Brutally hot peppers, white vinegar, garlic, salt, ajwain seed, amchoor, hing powder (rice flour, gum arabic, asafoetida, turmeric), ginger extract", bottle_size: "5oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/burnafter.jpg?v=1628209938&width=680")
+sauce33.photo.attach(io: file, filename: "Burn_image", content_type: "image/png")
+
+sauce34 = Product.create!(name: "Scorpion Hot Sauce", manufacturer: "Heartbeat Hot Sauce", price: 12.00, description: "The good folks at Heartbeat Hot Sauce have brought the heat for Hot Ones Season 13! Their hottest hot sauce yet, this new recipe features Trinidad Scorpion Peppers to get your blood pumping! Even with a unique combination of ingredients, including beets, red bell peppers and chipotles in adobo, this sauce still has the well-balanced versatility you’ve come to expect from the Heartbeat team. With its hot but not too-hot spice level and nuanced flavor, this sauce makes just about any food sing: eggs, pizza, tacos and more. Your new go-to!", ingredients: "Vinegar, red peppers, habaneros, beets, onions, garlic, Trinidad Scorpion Peppers, Chipotles in adobo (red chipotle pepper, water, vinegar, sugar, salt, tomato paste, smoke essence, onion, garlic), salt, lemon juice, canola oil, spices", bottle_size: "6oz")
+file = URI.open(https://cdn.shopify.com/s/files/1/2086/9287/products/heartbeat1.jpg?v=1628204324&width=680"")
+sauce34.photo.attach(io: file, filename: "Scorpion_image", content_type: "image/png")
+
+sauce35 = Product.create!(name: "Reaper Hot Sauce", manufacturer: "SeaFire Gourmet", price: 12.00, description: "This hot but not too-hot Carolina Reaper sauce gives us big barbecue vibes with smoky chipotles balanced by two different types of vinegar, aromatic garlic and a honey & brown sugar combo for sweetness. Sprinkled with a few of Smokin’ Ed’s Carolina Reaper peppers for building heat, this is your next go-to cook out sauce. Try it on ribs, brisket, grilled portobellos and more!", ingredients: "White wine vinegar, Carolina Reaper peppers, Chipotle peppers, balsamic vinegar, shallots, garlic, honey, brown sugar, Mediterranean sea salt, vitamin C", bottle_size: "5oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/seafire.jpg?v=1628213317&width=680")
+sauce35.photo.attach(io: file, filename: "Reaper_image", content_type: "image/png")
+
+sauce36 = Product.create!(name: "Spicier Smoke Hot Sauce", manufacturer: "Shaquanda's", price: 10.00, description: "Everyone’s favorite saucy mama is back and she is spicing things up! A hotter version of the original pepper sauce featured in Season 9 of Hot Ones, this recipe packs a punch thanks to added habanero and has a hint of smoke from paprika powder. The heat makes way for bold Caribbean-inspired flavors: a hit of aromatic onion, punchy mustard, and the natural sweetness of the peppers. Try it with sausage, roasted cauliflower, breakfast hash and more. ", ingredients: "Onion, white vinegar, habanero, roasted red pepper, lemon juice, sugar, salt, mustard, turmeric, smoked paprika powder", bottle_size: "5oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/shaqsmoke1.jpg?v=1628213738&width=680")
+sauce36.photo.attach(io: file, filename: "Spiciersmokehotsauce_image", content_type: "image/png")
+
+sauce37 = Product.create!(name: "Goat Rider Hot Sauce", manufacturer: "Angry Goat Pepper Co", price: 12.00, description: "The makers of everyone’s favorite hippy dippy hot sauce are back with a new sauce full of comforting flavors and a medium kick. Cayenne starts off the heat, with a slight upfront burn that makes way for notes of warm balsamic and hints of sweet Vermont maple syrup. Roasted red bell pepper and garlic balance things out on the savory side. Then the ghost pepper peeks in for a little unexpected punch! Delicious on steak, portobello burgers, grilled chicken sandwiches and more! ", ingredients: "Balsamic vinegar (wine vinegar, concentrated grape must, caramel color), cayenne pepper mash (cayenne peppers, salt), Vermont maple syrup, roasted red pepper (roasted red bell peppers, water, citric acid & salt), molasses, garlic powder, apple cider vinegar, ghost pepper mash (ghost peppers, vinegar), smoked paprika, ghost pepper powder", bottle_size: "5oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/ANGRYGOAT1.jpg?v=1628200179&width=680")
+sauce37.photo.attach(io: file, filename: "Goat_image", content_type: "image/png")
+
+sauce38 = Product.create!(name: "", manufacturer: "", price: , description: "", ingredients: "", bottle_size: "oz")
 file = URI.open("")
-sauce31.photo.attach(io: file, filename: "Guajillo_image", content_type: "image/png")
+sauce38.photo.attach(io: file, filename: "Guajillo_image", content_type: "image/png")
+
+
+sauce39 = Product.create!(name: "", manufacturer: "", price: , description: "", ingredients: "", bottle_size: "oz")
+file = URI.open("")
+sauce39.photo.attach(io: file, filename: "Guajillo_image", content_type: "image/png")
 
 LOCATIONS = ["North America", "South America", "South East Asia", "Middle East", "Africa", "Europe"]
 
