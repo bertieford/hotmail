@@ -20,4 +20,11 @@ export default class extends Controller {
     })
   }
 
+  show(event){
+    // console.log(this.pillTargets)
+    this.pillTargets.forEach(target => {
+      target.classList.add("d-none")
+    })
+  }
+
 }
