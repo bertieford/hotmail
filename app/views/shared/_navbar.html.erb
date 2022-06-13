@@ -12,7 +12,7 @@
 
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "Home", class: "navbar-brand" do %>
+    <%= link_to "/", class: "navbar-brand" do %>
       <%= image_tag "https://cdn-icons-png.flaticon.com/512/119/119382.png" %>
     <% end %>
 
@@ -35,7 +35,9 @@
           <li class="nav-item dropdown">
             <%= image_tag "https://pbs.twimg.com/profile_images/1491949205308338181/gQ3o6RCH_400x400.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <% if current_user.admin == true %>
               <%= link_to "Add Sauce", "products/new", class: "dropdown-item" %>
+            <% end %>
               <%= link_to "Orders", "/orders/", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data:{ turbo_method: :delete }, class: "dropdown-item" %>
             </div>
