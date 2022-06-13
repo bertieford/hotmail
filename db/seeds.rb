@@ -186,9 +186,9 @@ sauce39 = Product.create!(name: "Mezcaline", manufacturer: "Burns and McCoy", pr
 file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/HOTONES-SEASON18-Mezcaline.jpg?v=1652725172&width=680")
 sauce39.photo.attach(io: file, filename: "Mezcaline_image", content_type: "image/png")
 
-sauce40 = Product.create!(name: "", manufacturer: "", price: , description: "", ingredients: "", bottle_size: "oz")
-file = URI.open("")
-sauce40.photo.attach(io: file, filename: "Guajillo_image", content_type: "image/png")
+sauce40 = Product.create!(name: "Cosmic Dumpling Hot Sauce", manufacturer: "Karma Sauce", price: 12.00, description: "Cosmic Dumpling gets its name from sauce maker Gene’s former career as an engineer for NASA satellites! The hot sauce lives up to its out-of-this-world name with supernova-sized, sweet and savory flavors thanks to tamari, orange juice, honey, and garlic, all getting liftoff from a healthy dose of sesame oil. Like a black hole, it pulls in everything in its path - dumplings, spring rolls, bao and more. Also makes a universally good glaze, on pork belly, salmon, tofu or more! ", ingredients: "Rice wine vinegar, red jalapeno peppers, tamari (water, soybeans, salt, alcohol), brown sugar, orange juice, garlic, tomato paste (fresh tomatoes, naturally sourced citric acid), lemon juice, honey, sesame oil, ginger, culantro, orange zest", bottle_size: "5oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/cosmic-dumpling.jpg?v=1622751529&width=680")
+sauce40.photo.attach(io: file, filename: "CosmicDumpling_image", content_type: "image/png")
 
 LOCATIONS = ["North America", "South America", "South East Asia", "Middle East", "Africa", "Europe"]
 
