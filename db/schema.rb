@@ -47,7 +47,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_10_111333) do
     t.datetime "updated_at", null: false
     t.bigint "order_id", null: false
     t.bigint "product_id", null: false
-    t.integer "qty", default: 1
     t.index ["order_id"], name: "index_order_products_on_order_id"
     t.index ["product_id"], name: "index_order_products_on_product_id"
   end
@@ -69,7 +68,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_10_111333) do
     t.string "name"
     t.text "description"
     t.string "manufacturer"
-    t.float "price"
+    t.string "price"
     t.text "ingredients"
     t.string "bottle_size"
   end
