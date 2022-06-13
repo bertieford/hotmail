@@ -190,13 +190,13 @@ sauce40 = Product.create!(name: "Cosmic Dumpling Hot Sauce", manufacturer: "Karm
 file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/cosmic-dumpling.jpg?v=1622751529&width=680")
 sauce40.photo.attach(io: file, filename: "CosmicDumpling_image", content_type: "image/png")
 
-sauce41 = Product.create!(name: "", manufacturer: "", price: 12, description: "", ingredients: "", bottle_size: "5oz")
-file = URI.open("")
-sauce41.photo.attach(io: file, filename: "CosmicDumpling_image", content_type: "image/png")
+sauce41 = Product.create!(name: "Keith's Taco Sauce", manufacturer: "Keith's", price: 12, description: "He’s eaten the menu at Taco Bell. He wrote the song on grocery store tacos. After changing the hot sauce game with his Chicken and Burger sauces, Keith Habersberger of Try Guys fame is back to give new life to taco night with Keith’s Taco Sauce! This not-too-hot sauce features zippy jalapenos and serranos blended with citrus and earthy aromatics. Cinnamon and raisins, a nod to the centuries old tradition of adding dried fruit to savory dishes, sweeten the deal. Keith’s Taco Sauce adds unexpected complexity and flavor to your favorite taco fixings, plus picadillos, pork chops and more! ", ingredients: "Distilled vinegar, jalapeños, serranos, lime juice, garlic scapes, smoked onion, grapefruit juice, orange juice, garlic, salt, corn, raisins, cumin, smoked paprika, cinnamon, coriander, allspice", bottle_size: "5oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/Keith_staco.jpg?v=1620164161&width=680")
+sauce41.photo.attach(io: file, filename: "KeithTaco_image", content_type: "image/png")
 
-sauce42 = Product.create!(name: "", manufacturer: "", price: 12, description: "", ingredients: "", bottle_size: "5oz")
-file = URI.open("")
-sauce42.photo.attach(io: file, filename: "CosmicDumpling_image", content_type: "image/png")
+sauce42 = Product.create!(name: "Keith's Burger Sauce", manufacturer: "Keith's", price: 12, description: "Keith Habersberger (of Try Guys fame) rocked the world of hot sauce with the launch of Keith’s Chicken Sauce in 2019. Now he’s back with a brand new hot sauce guaranteed to light your fire (your mild, tasty fire): Keith’s Burger Sauce! Featuring a flavor-packed blend of smoked serrano and jalapeno peppers, this sauce’s mild heat lights up everything from burgers to veggies and beyond. A combination of maple syrup and figs bring sweet and warming notes, while mustard seed and sun dried tomatoes nod at traditional burger flavors, only with way more depth of deliciousness. Whether you like yours rare, with cheese, smashed or vegetarian, burgers are brought to the next level with Keith’s Burger Sauce. Also FREAKING AMAZING as a salad dressing or steak sauce!", ingredients: "Distilled vinegar, smoked serranos, smoked jalapenos, smoked onions, smoked onion juice, maple syrup, mustard seeds, figs (figs, rice flour), salt, sun dried tomatoes, horseradish, garlic, garlic scapes, black pepper", bottle_size: "5oz")
+file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/keithburger1productpage.jpg?v=1628210109&width=680")
+sauce42.photo.attach(io: file, filename: "KeithBurger_image", content_type: "image/png")
 
 sauce43 = Product.create!(name: "", manufacturer: "", price: 12, description: "", ingredients: "", bottle_size: "5oz")
 file = URI.open("")
@@ -205,6 +205,10 @@ sauce43.photo.attach(io: file, filename: "CosmicDumpling_image", content_type: "
 sauce44 = Product.create!(name: "", manufacturer: "", price: 12, description: "", ingredients: "", bottle_size: "5oz")
 file = URI.open("")
 sauce44.photo.attach(io: file, filename: "CosmicDumpling_image", content_type: "image/png")
+
+sauce45 = Product.create!(name: "", manufacturer: "", price: 12, description: "", ingredients: "", bottle_size: "5oz")
+file = URI.open("")
+sauce45.photo.attach(io: file, filename: "CosmicDumpling_image", content_type: "image/png")
 
 LOCATIONS = ["North America", "South America", "South East Asia", "Middle East", "Africa", "Europe"]
 
