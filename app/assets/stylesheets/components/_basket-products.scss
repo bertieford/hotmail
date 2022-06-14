@@ -1,11 +1,14 @@
 .card-product {
   overflow: hidden;
-  height: 260px;
+  height: 300px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   border-radius: 8px;
+  padding: 16px;
+  justify-content: space-around;
+  width: 60%;
 }
 
 .card-product img {
@@ -21,13 +24,16 @@
 }
 
 .card-product p {
-  font-size: 16px;
-  line-height: 1;
-  margin-bottom: 0;
+  font-size: 12px;
+  margin-bottom: 8px;
   margin-top: 8px;
   font-weight: bold;
+  line-height: 0.5;
+  display: flex;
+  align-items: center;
 }
 
 .card-product .card-product-infos {
-  padding: 16px;
+  padding: 8px;
+  height: 100%;
 }
