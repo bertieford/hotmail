@@ -7,7 +7,7 @@
   align-items: center;
   border-radius: 8px;
   padding: 16px;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .card-product-infos{
@@ -39,4 +39,9 @@
 .card-product .card-product-infos {
   padding: 8px;
   height: 100%;
+}
+
+.qty-bar {
+  display: flex;
+  justify-content: space-around;
 }

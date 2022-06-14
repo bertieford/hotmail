@@ -10,11 +10,11 @@
     <div class="card-product my-3">
       <div class="card-product-infos">
         <p><%= link_to order_product.product.name, product_path(order_product.product_id) %></p>
-        <p>By <%= order_product.product.manufacturer %></p>
+        <p>| <%= order_product.product.manufacturer %></p>
         <br>
         <p>Qty:</p>
         <br>
-        <div class="qty-bar d-flex justfiy-content-bweteen">
+        <div class="qty-bar">
           <%= simple_form_for [order_product.product, order_product] do |f|%>
             <%= f.button :submit, "-", class:"btn btn-primary" %>
           <%# <%= f.hidden_field :change, value: "down" %>
