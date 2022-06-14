@@ -14,7 +14,7 @@
         <br>
         <p>Qty:</p>
         <br>
-        <div class="qty-bar d-flex justfiy-content-bweteen">
+        <div class="qty-bar">
           <%= simple_form_for [order_product.product, order_product] do |f|%>
             <%= f.button :submit, "-", class:"btn btn-primary" %>
           <%# <%= f.hidden_field :change, value: "down" %>
