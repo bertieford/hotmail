@@ -6,11 +6,12 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 require "open-uri"
-
-puts "Clearing products"
+puts "Deleting reviews"
 Review.destroy_all
 OrderProduct.destroy_all
+puts "Clearing products"
 Product.destroy_all
+puts "Deleting orders"
 Order.destroy_all
 puts "Deleting Users"
 User.destroy_all
