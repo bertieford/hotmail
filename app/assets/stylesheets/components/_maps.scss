@@ -1,0 +1,50 @@
+#tabs {
+	color: #52233d;
+}
+
+#tabs path {
+	cursor: pointer;
+	opacity: 0.2;
+}
+
+#tabs path:hover {
+	opacity: 1;
+}
+
+#tabs path.semoperacao {
+	cursor: default;
+	opacity: 1;
+}
+
+#tabs .regiao {
+	color: #666666;
+	font-weight: bold;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+#tabs .regiao span{
+	font-size: 10px;
+	margin-left: 5px;
+}
+
+#tabs .current {
+	color: #52233d;
+}
+
+#tabs path.current {
+	opacity: 1;
+}
+
+#tabs .tab-content {
+	display: none;
+}
+
+#tabs #tabs-asia {
+	display: block;
+}
+
+.cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+  fill: #FF8B38 !important;
+  stroke: #000000 !important;
+  }

@@ -1,0 +1,14 @@
+.wrapper {
+  display: grid;
+  grid-template-rows: repeat(3, 200px);
+  gap: 10px;
+  grid-auto-flow: column;
+  grid-auto-columns: 300px 100px;
+}
+
+.world-btn {
+  background-color: aqua;
+  border-width: 1px;
+  border-color: black;
+  border-radius: 1px;
+}
