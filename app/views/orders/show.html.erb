@@ -24,6 +24,7 @@
       <%= f.button :submit, "UP", class:"btn btn-primary" %>
       <%# <%= f.hidden_field :change, value: "up" %>
     <% end %>
+
     <%= simple_form_for [order_product.product, order_product] do |f|%>
       <%= f.button :submit, "DOWN", class:"btn btn-primary" %>
       <%# <%= f.hidden_field :change, value: "down" %>
@@ -36,6 +37,9 @@
 
   <%= form_tag checkouts_path do %>
     <%= hidden_field_tag 'order_id', @order.id %>
-    <%= submit_tag 'Checkout', class: 'btn btn-primary my-3' %>
-  <% end %>
+    <div class="bottom-row d-flex justify-content-between">
+      <%= submit_tag 'Checkout', class: 'btn btn-primary my-3' %>
+      <% end %>
+      <%= link_to "Want some more?", products_path%>
+    </div>
 </div>
