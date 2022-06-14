@@ -15,13 +15,13 @@
         <br>
         <div class="qty-bar d-flex justfiy-content-bweteen">
           <%= simple_form_for [order_product.product, order_product] do |f|%>
-            <%= f.button :submit, "+", class:"btn btn-primary" %>
-          <%# <%= f.hidden_field :change, value: "up" %>
+            <%= f.button :submit, "-", class:"btn btn-primary" %>
+          <%# <%= f.hidden_field :change, value: "down" %>
           <% end %>
           <p><%= order_product.qty %></p>
           <%= simple_form_for [order_product.product, order_product] do |f|%>
-            <%= f.button :submit, "-", class:"btn btn-primary" %>
-          <%# <%= f.hidden_field :change, value: "down" %>
+            <%= f.button :submit, "+", class:"btn btn-primary" %>
+          <%# <%= f.hidden_field :change, value: "up" %>
           <% end %>
         </div>
         <br>
