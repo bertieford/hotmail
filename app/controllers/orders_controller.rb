@@ -33,6 +33,7 @@ class OrdersController < ApplicationController
     @order = Order.find_by(complete: false)
     @products = @order.products
     @order_products = OrderProduct.all.order('created_at DESC')
+
   end
 
   private
