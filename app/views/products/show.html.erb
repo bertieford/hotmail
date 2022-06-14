@@ -27,12 +27,14 @@
       <% end %>
 
 
-
-      <p class="py-3"><strong>Reviews</strong></p>
-      <% @product.reviews.each do |review| %>
-        <p>Reviewed by: <%= review.user.first_name %></p>
-        <p>They said: <%= review.content %></p>
-        <p><%= review.rating %>/5</p>
+      <% if @product.reviews.count == 0 %>
+      <% else %>
+        <p class="py-3"><strong>What people think</strong></p>
+        <% @product.reviews.each do |review| %>
+          <p>Reviewed by: <%= review.user.first_name %></p>
+          <p>They said: <%= review.content %></p>
+          <p><%= review.rating %>/5</p>
+        <% end %>
       <% end %>
 
     </div>
