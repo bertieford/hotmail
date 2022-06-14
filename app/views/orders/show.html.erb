@@ -1,12 +1,15 @@
 <%# <% sum = 0 %>
 <div class="container">
-  <h1 class = "my-5">My Basket</h1>
-  <h2>Order ID: <%= @order.id %></h2>
+  <h1 class = "mt-5 mb-3">My Basket</h1>
+  <div class="headings d-flex justify-content-between">
+    <h2>Order ID: <%= @order.id %></h2>
+    <%= link_to "Want some more?", products_path%>
+  </div>
   <hr>
   <% # LOOPING THROUGH ORDER_PRODUCTS AND SHOWING DETAILS THEREIN %>
   <% @order_products.each do |order_product| %>
 
-    <%= link_to order_product.product.name, product_path(order_product.product_id) %>
+    <strong><%= link_to order_product.product.name, product_path(order_product.product_id) %></strong>
     <br>
     Qty: <%= order_product.qty %>
     <br>
@@ -33,9 +36,6 @@
 
   <%= form_tag checkouts_path do %>
     <%= hidden_field_tag 'order_id', @order.id %>
-    <%= submit_tag 'Checkout', class: 'btn btn-primary' %>
+    <%= submit_tag 'Checkout', class: 'btn btn-primary mb-3' %>
   <% end %>
-
-
-  <%= link_to "All Sauces", products_path %>
 </div>
