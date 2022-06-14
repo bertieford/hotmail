@@ -45,9 +45,11 @@
   <div class="related-products my-5">
     <p><strong>More Like <%= @product.name %></strong></p>
      <% @relatedproducts.each do |product| %>
-    <div class="related-card" style="background-image: url('<%= cl_image_path product.photo.key %>')">
-     <p class="related-title"><%= link_to product.name, product_path(product) %> </p>
-    </div>
+      <%= link_to product_path(product) do %>
+        <div class="related-card" style="background-image: url('<%= cl_image_path product.photo.key %>')">
+        <p class="related-title"> <%= product.name %></p>
+        </div>
+      <% end %>
     <% end %>
   </div>
 
