@@ -11,6 +11,7 @@ Review.destroy_all
 OrderProduct.destroy_all
 puts "Clearing products"
 Product.destroy_all
+Checkout.destroy_all
 puts "Deleting orders"
 Order.destroy_all
 puts "Deleting Users"
