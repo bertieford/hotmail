@@ -12,14 +12,15 @@ class OrderProductsController < ApplicationController
   end
 
   def update
+    # raise
     @order = @order_product.order
-    if params[:commit] == "UP"
+    if params[:commit] == "+"
       @order_product.qty += 1
       @order_product.save
       redirect_to order_path(@order_product.order)
       @order.amount += @order_product.product.price
       @order.save!
-    elsif params[:commit] == "DOWN"
+    elsif params[:commit] == "-"
       @order_product.qty -= 1
       @order_product.save
       redirect_to order_path(@order_product.order)
