@@ -33,8 +33,14 @@ class OrderProductsController < ApplicationController
     # DEFINING THE PRODUCT
     @product = Product.find(params[:product_id])
     # DEFINING THE ORDER
-    if !current_user.orders.empty?
-      if current_user.orders.last.complete
+    if current_user.orders.empty?
+
+      @order = Order.new
+      @order.user = current_user
+      @order.amount += @product.price
+      @order.save!
+    else
+      if current_user.orders.last.state = 'complete'
         @order = Order.new
         @order.user = current_user
         @order.amount += @product.price
@@ -44,11 +50,6 @@ class OrderProductsController < ApplicationController
         @order.amount += @product.price
         @order.save!
       end
-    else
-      @order = Order.new
-      @order.user = current_user
-      @order.amount += @product.price
-      @order.save!
     end
     # EXPLORING IF PRODUCT ALREADY EXISTS IN AN ORDER PRODUCT BELONGING TO THIS ORDER.
     @order_product = OrderProduct.new

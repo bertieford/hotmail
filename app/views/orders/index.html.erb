@@ -1,17 +1,17 @@
 <div class="container">
   <h1 class="my-3">Order History</h1>
   <p>Your past orders with us:</p>
-  <% @orders.each do |order| %>
-  <% if order.complete  %>
-    Order Number: <%= order.id %>
-    <br>
-    Total Cost: <%= order.amount %>
-    <br>
-    <%= link_to "Go to this order", order_path(order) %>
-    <hr>
-    <% else  %>
+  <% if @orders.count != 0 %>
+    <% @orders.each do |order| %>
+      Order Number: <%= order.id %>
+      <br>
+      Total Cost: <%= order.amount %>
+      <br>
+      <%= link_to "Go to this order", order_path(order) %>
+      <hr>
+    <% end %>
+  <% else %>
     <h2>No order history yet.</h2>
   <% end %>
-
   <%= link_to "All Sauces", products_path %>
 </div>
