@@ -1,10 +1,17 @@
 <div class="container">
-  <div class="row py-4">
+  <div class="row py-5">
     <%# <div class="col-md-3"><%= image_tag @checkoput.teddy.photo_url, width: '100%' %>
     <div class="col">
-      <h1>Checkout summary</h1>
-      <p>Purchase of <strong><%= @checkout.order.id %></strong> for <strong><%= humanized_money_with_symbol @checkout.amount_cents %></strong></p>
-      <button id="pay" class="btn btn-primary">Pay</button>
+      <h1 class="pb-3">Checkout summary</h1>
+      <ul>
+        <% @checkout.order.products.each do |product| %>
+          <li><%= product.name %> (per item: <%= product.price %>)</li>
+        <% end %>
+      </ul>
+      <p>Total cost of order: <strong><%= humanized_money_with_symbol @checkout.amount_cents %></strong></p>
+      <button id="pay" class="btn btn-primary">Pay Now!</button>
+
+      <p class="py-5">If it's not with you in 3 days, get in touch!</p>
 
       <script src="https://js.stripe.com/v3/"></script>
       <script>
