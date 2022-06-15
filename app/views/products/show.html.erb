@@ -10,9 +10,15 @@
       </div>
       <br>
       <p><%= @product.description %></p>
-      <p><strong>Ingredients: </strong><%= @product.ingredients %></p>
+      <% if @product.ingredients == nil %>
+      <% else %>
+        <p><strong>Ingredients: </strong><%= @product.ingredients %></p>
+      <% end %>
       <p><strong>Location:</strong> <%= @product.location %></p>
-      <p><strong>Size:</strong> <%= @product.bottle_size %></p>
+      <% if @product.bottle_size == nil %>
+      <% else %>
+        <p><strong>Size:</strong> <%= @product.bottle_size %></p>
+      <% end %>
       <p>Amount: <%= humanized_money_with_symbol(@product.price) %></p>
 
       <% if @product.reviews.count == 0 %>
