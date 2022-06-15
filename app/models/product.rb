@@ -4,8 +4,8 @@ class Product < ApplicationRecord
   has_many :reviews, dependent: :destroy
   validates :name, presence: true
   validates :description, presence: true
-  validates :ingredients, presence: true
-  validates :bottle_size, presence: true
+  # validates :ingredients, presence: true
+  # validates :bottle_size, presence: true
   validates :manufacturer, presence: true
   validates :price, presence: true
   has_one_attached :photo
