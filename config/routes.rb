@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   end
   # Defines the root path route ("/")
   # root "articles#index"
-  get "worldbuttons", to: "pages#worldbuttons"
+  get "blog", to: "pages#blog"
+  get "about", to: "pages#about"
 end
