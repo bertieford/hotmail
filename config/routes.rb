@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   resources :orders
   # Defines the root path route ("/")
   # root "articles#index"
+  get "blog", to: "pages#blog"
+  get "about", to: "pages#about"
 end
