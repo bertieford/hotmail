@@ -31,11 +31,13 @@ class OrdersController < ApplicationController
 
   def show
     # @order = Order.find_by(complete: false)
-
-    @orders = Order.where(user: current_user, state: 'pending')
-    @order = Order.find(params[:id]) # how does show page know which order is the live one?
-    @products = @order.products
-    @order_products = OrderProduct.all.order('created_at DESC')
+    # @orders = Order.where(user: current_user, state: 'pending')
+    @order = Order.find_by(id: params[:id], state: 'pending') # how does show page know which order is the live one?
+    if @order
+      @order_products = OrderProduct.where(order_id: @order.id).order('created_at DESC')
+    else
+      redirect_to nobasket_path
+    end
   end
 
   private
