@@ -1,0 +1,22 @@
+<%# <% sum = 0 %>
+<div class="container">
+  <h1 class = "mt-5 mb-3">Review your favourite sauces!</h1>
+  <div class="headings d-flex justify-content-between">
+    <h2>This was from Order Number: <%= @order.id %><h2>Total price: <%= @order.amount %></h2>
+  </div>
+  <hr>
+  <% # LOOPING THROUGH ORDER_PRODUCTS AND SHOWING DETAILS THEREIN %>
+  <div class="related-products my-5">
+  <% @products.each do |product| %>
+        <%= link_to product_path(product) do %>
+    <div class="related-card my-3" style="background-image: url('<%= cl_image_path product.photo.key %>')">
+      <%# <p class="related-title"> <%= product.name %>
+      <%# </p> %>
+    </div>
+      <% end %>
+  <% end %>
+  </div>
+    <%# Total price: <%= sum %>
+
+
+</div>
