@@ -285,92 +285,19 @@ Featuring:
 
 - Metallic HEATONIST sticker
 
-- 6 signature Heartbeat hot sauces, including
-
-Heartbeat Hot Sauce | Jalapeno
-Ingredients: Jalapeno, onion, distilled vinegar, serrano pepper, sugar, lime juice, garlic, canola oil, cilantro.
-Size: 6 FL oz
-
-Heartbeat Hot Sauce | Blueberry Habanero
-Ingredients: Blueberries, bell pepper, onion, distilled vinegar, sugar, red habanero, garlic, lime juice, kosher salt, canola oil, blueberry ale (water, malted barley, hops, blueberries)
-Size: 6 FL oz
-CONTAINS A SMALL AMOUNT OF GLUTEN
-
-Heartbeat Hot Sauce | Dill Pickle Serrano
-Ingredients: Vinegar, onion, jalapeno, cucumber, serrano pepper, salt, garlic, dill, canola oil, spices, mustard seed
-Size: 6 FL oz
-
-Heartbeat Hot Sauce | Habanero
-Ingredients: Bell pepper, onion, white vinegar, sugar, red habanero, garlic, lime juice, kosher salt, canola oil
-Size: 6 FL oz
-
-Heartbeat Hot Sauce | Pineapple Habanero
-Ingredients: Pineapple, yellow peppers, onion, distilled vinegar, habaneros, sugar, lime juice, kosher salt, garlic, canola oil, ale (water, hops, malted barley, yeast)
-Size: 6 FL OZ
-CONTAINS A SMALL AMOUNT OF GLUTEN
-
-Heartbeat Hot Sauce | Scorpion
-Ingredients: Vinegar, red peppers, habaneros, beets, onions, garlic, Trinidad Scorpion Peppers, Chipotles in adobo (red chipotle pepper, water, vinegar, sugar, salt, tomato paste, smoke essence, onion, garlic), salt, lemon juice, canola oil, spices
-Size: 6 FL oz")
+- 6 signature Heartbeat hot sauces, including")
 file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/heartbeat6pack.jpg?v=1643403975&width=680")
 sauce62.photo.attach(io: file, filename: "HeartbeatHotSauceSet_image", content_type: "image/png")
 
-sauce63 = Product.create!(name: "Mellow Habanero Hot Sauce Trio", manufacturer: "Mellow Habanero", price: 80, description: "The best Japanese hot sauces! Taku “Habanero Man” Kondo of ta-nm farm in Hyogo, Japan grows just enough organic habanero peppers each year to make one batch of his highly creative craft hot sauces. His golden habaneros are special enough on their own, having a distinctly bright, citrus-forward flavor. But once Taku blends them with high quality, all-natural ingredients, they sing. Featuring a range of flavor profiles - vibrant with fruit, savory and balanced, smoky with umami - and heat levels, these three sauces are must haves for true hot sauce lovers. The uniquely shaped bottles and gorgeous labels make this hot sauce gift set a homerun holiday present. Patrons of our Williamsburg, Brooklyn shop will know to stock up quickly - once this limited edition collection sells out, it's gone until the next year's harvest!
-
-  Smoky with Chipotle
-  The highest quality smoked jalapenos (aka chipotle) and habaneros are the true stars of this umami-packed sauce. Mild heat means it’s ready to be added to tacos, steak and more.
-  Ingredients: Rice vinegar, tomato, onions, balsamic vinegar, smoked jalapeno, smoked habanero, sea salt
-  Size: 5 FL OZ
-
-  Mellow Habanero
-  Sometimes, the simplest ingredients make the most luxurious flavors. Taku’s original recipe has savory tomato and onion balanced by sweet mango. Use liberally on everything (we mean it).
-  Ingredients: Tomato, onion, rice vinegar, habanero, mango, garlic, sea salt
-  Size: 5 FL OZ
-
-  Yuzu Heaven
-  This HEATONIST exclusive features bright, citrusy yuzu to awaken the senses, leading into powerful heat from the habaneros. Try dipping sushi or use it as a marinade for chicken or pork.
-  Ingredients: Organic habanero, rice vinegar, yuzu juice, yuzu peel, organic mango, sea salt
-  Size: 5 FL OZ")
+sauce63 = Product.create!(name: "Mellow Habanero Hot Sauce Trio", manufacturer: "Mellow Habanero", price: 80, description: "The best Japanese hot sauces! Taku “Habanero Man” Kondo of ta-nm farm in Hyogo, Japan grows just enough organic habanero peppers each year to make one batch of his highly creative craft hot sauces. His golden habaneros are special enough on their own, having a distinctly bright, citrus-forward flavor. But once Taku blends them with high quality, all-natural ingredients, they sing. Featuring a range of flavor profiles - vibrant with fruit, savory and balanced, smoky with umami - and heat levels, these three sauces are must haves for true hot sauce lovers. The uniquely shaped bottles and gorgeous labels make this hot sauce gift set a homerun holiday present. Patrons of our Williamsburg, Brooklyn shop will know to stock up quickly - once this limited edition collection sells out, it's gone until the next year's harvest!")
 file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/MellowHabaneroTrio-2.jpg?v=1637719154&width=680")
 sauce63.photo.attach(io: file, filename: "MellowHabaneroSet_image", content_type: "image/png")
 
-sauce64 = Product.create!(name: "Hot Sauce Trio: Chicken, Burger & Taco Sauces", manufacturer: "Keith's", price: 33, description: "When Try Guys’ Keith Habersberger first approached us about creating a hot sauce based on his love of fried chicken, buffalo and ranch, we knew he was on to something. Fans couldn’t get enough of Keith’s Chicken Sauce for its tangy flavor and not-too-hot spice level. But that was just the opening chapter of Keith’s hot sauce story. Introducing the ultimate tasty trio of Keith’s Hot Sauces: Keith’s Burger Sauce makes any burger a Habersburger with its sweet mustard base, while the newest addition, Keith’s Taco Sauce, takes taco night to new heights with jalapenos, raisins and citrus. This pack is full of versatile flavors that are as delicious on their namesakes as they are on other stuff, meaning Keith has you covered for all your favorite meals. And the not-too-hot heat level means they’re perfect for spice novices and flavor hounds alike.
-
-  Keith’s Chicken Sauce
-  Also great on: Pizza, mac n cheese, salads
-  Ingredients: Organic distilled vinegar, serrano peppers, maple wood smoked onions, pure Vermont maple syrup, garlic scapes, roasted red peppers ( red peppers, water, salt, citric acid) sunflower oil, sour cream powder ( sour cream powder cream cultures and lactic acid, cultured nonfat milk solids, citric acid) salt, dill, parsley, chives, black pepper
-  CONTAINS MILK
-  Size: 5 FL oz
-
-  Keith’s Burger Sauce
-  Also great on: Meat loaf, sandwiches, french fries
-  Ingredients: Distilled vinegar, smoked serranos, smoked jalapenos, smoked onions, smoked onion juice, maple syrup, mustard seeds, figs (figs, rice flour), salt, sun dried tomatoes, horseradish, garlic, garlic scapes, black pepper
-  Size: 5 FL oz
-
-  Keith’s Taco Sauce
-  Also great on: Pork chops, burritos, eggs
-  Ingredients: Distilled vinegar, jalapeños, serranos, lime juice, garlic scapes, smoked onion, grapefruit juice, orange juice, garlic, salt, corn, raisins, cumin, smoked paprika, cinnamon, coriander, allspice
-
-  Size: 5 FL oz")
+sauce64 = Product.create!(name: "Hot Sauce Trio: Chicken, Burger & Taco Sauces", manufacturer: "Keith's", price: 33, description: "When Try Guys’ Keith Habersberger first approached us about creating a hot sauce based on his love of fried chicken, buffalo and ranch, we knew he was on to something. Fans couldn’t get enough of Keith’s Chicken Sauce for its tangy flavor and not-too-hot spice level. But that was just the opening chapter of Keith’s hot sauce story. Introducing the ultimate tasty trio of Keith’s Hot Sauces: Keith’s Burger Sauce makes any burger a Habersburger with its sweet mustard base, while the newest addition, Keith’s Taco Sauce, takes taco night to new heights with jalapenos, raisins and citrus. This pack is full of versatile flavors that are as delicious on their namesakes as they are on other stuff, meaning Keith has you covered for all your favorite meals. And the not-too-hot heat level means they’re perfect for spice novices and flavor hounds alike.")
 file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/KEITH_STRIO3.jpg?v=1622657425&width=680")
 sauce64.photo.attach(io: file, filename: "KeithsSet_image", content_type: "image/png")
 
-sauce65 = Product.create!(name: "Señor Lechuga Hot Sauce Trio", manufacturer: "Señor Lechuga", price: 66, description: "The ultimate hot sauce gift pack for foodie hot sauce lovers! The hot sauces in this HEATONIST-exclusive set feature opulent, hard-to-find ingredients, combining luxurious flavors with premium peppers to create a great gift for gourmands and pepperheads alike. .507 features Cáscara, the husk of the coffee fruit, from award-winning Panamanian coffee roaster Café Unido. The floral, pomegranate notes of ultra-rare Geisha coffee ($1,300/lb!) are complemented with tropical passion fruit in .098, while .5326 includes not just white truffle oil, but also real winter Perigord black truffles, giving the hot sauce an irreplaceable umami quality that rounds out this pièce de résistance of a sauce pack. With some of the most unique flavor combinations we’ve ever seen, this is the must-have hot sauce gift set for epicures or anyone who enjoys a fine meal.
-
-.507 Habanero Coffee Cáscara
-Made with renowned chef Mario Castrellon featuring some of the world’s best coffee and Cáscara from Panama’s Café Unido. Fruity habaneros complement the sweet herbal undertones of the Cáscara and add just-right heat. A delicious hot sauce on everything from morning eggs to a cut of Wagyu.
-Ingredients: Bell peppers, vinegar, habanero peppers, red onion, garlic, himalayan sea salt, Café Unido Coffee, Café Unido Cáscara, paprika
-Size: 5 FL OZ
-
-.098 Habanero Geisha Coffee Passion Fruit
-The “98” in .098 comes from Café Unido’s 98/100 Coffee Review score for its premium Panama Geisha coffee. The coffee’s notes of pomegranate, dark chocolate and violet are accentuated by tartness from passion fruit and blueberry. Pair with ricotta toast or use as a glaze for ribs.
-Ingredients: White vinegar, blueberries, habanero, passion fruit, red onion, garlic, salt, Café Unido Geisha Coffee
-Size: 5 FL OZ
-
-.5326 Heirloom Tomatoes Winter Truffle Reapers
-Made in collaboration with precision knife crafter Half Face Blades, .5326 sauce uses 100% real black truffles for one-of-a-kind umami flavor. This is as luxurious as it gets, so treat yourself to it with a fine pasta, pâté, or on a show stopping mushroom risotto.
-Ingredients: Heirloom tomatoes, habanero peppers, white wine vinegar, white truffle olive oil (organic California extra virgin olive oil, organic white truffle infusion [tuber magnatum]), red onion, cremini mushrooms, sherry vinegar, garlic, salt, winter black Perigord truffles [tuber melanosporum], dried Carolina Reaper peppers
-Size: 5 FL OZ")
+sauce65 = Product.create!(name: "Señor Lechuga Hot Sauce Trio", manufacturer: "Señor Lechuga", price: 66, description: "The ultimate hot sauce gift pack for foodie hot sauce lovers! The hot sauces in this HEATONIST-exclusive set feature opulent, hard-to-find ingredients, combining luxurious flavors with premium peppers to create a great gift for gourmands and pepperheads alike. .507 features Cáscara, the husk of the coffee fruit, from award-winning Panamanian coffee roaster Café Unido. The floral, pomegranate notes of ultra-rare Geisha coffee ($1,300/lb!) are complemented with tropical passion fruit in .098, while .5326 includes not just white truffle oil, but also real winter Perigord black truffles, giving the hot sauce an irreplaceable umami quality that rounds out this pièce de résistance of a sauce pack. With some of the most unique flavor combinations we’ve ever seen, this is the must-have hot sauce gift set for epicures or anyone who enjoys a fine meal.")
 file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/Senorlechugapack.jpg?v=1637718702&width=680")
 sauce65.photo.attach(io: file, filename: "SeniorLechuga_image", content_type: "image/png")
 
