@@ -276,6 +276,18 @@ sauce61 = Product.create!(name: "Dill Pickle Serrano Hot Sauce", manufacturer: "
 file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/heartbeat-dill-pickle-saucecopy.jpg?v=1627335268&width=680")
 sauce61.photo.attach(io: file, filename: "Dillpickle_image", content_type: "image/png")
 
+sauce62 = Product.create!(name: "Mellow Habanero Hot Sauce Trio", manufacturer: "Mellow Habanero", price: 80, description: "The best Japanese hot sauces! Taku “Habanero Man” Kondo of ta-nm farm in Hyogo, Japan grows just enough organic habanero peppers each year to make one batch of his highly creative craft hot sauces. His golden habaneros are special enough on their own, having a distinctly bright, citrus-forward flavor. But once Taku blends them with high quality, all-natural ingredients, they sing. Featuring a range of flavor profiles - vibrant with fruit, savory and balanced, smoky with umami - and heat levels, these three sauces are must haves for true hot sauce lovers. The uniquely shaped bottles and gorgeous labels make this hot sauce gift set a homerun holiday present. Patrons of our Williamsburg, Brooklyn shop will know to stock up quickly - once this limited edition collection sells out, it's gone until the next year's harvest!", bottle_size: "6oz")
+file = URI.open("")
+sauce62.photo.attach(io: file, filename: "Dillpickle_image", content_type: "image/png")
+
+sauce63 = Product.create!(name: "", manufacturer: "", price: 12, description: "", ingredients: "", bottle_size: "6oz")
+file = URI.open("")
+sauce63.photo.attach(io: file, filename: "Dillpickle_image", content_type: "image/png")
+
+sauce64 = Product.create!(name: "", manufacturer: "", price: 12, description: "", ingredients: "", bottle_size: "6oz")
+file = URI.open("")
+sauce64.photo.attach(io: file, filename: "Dillpickle_image", content_type: "image/png")
+
 LOCATIONS = ["North America", "South America", "South East Asia", "Middle East", "Africa", "Europe"]
 
 Product.all.each do |product|
