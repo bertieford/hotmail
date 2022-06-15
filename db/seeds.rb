@@ -285,7 +285,7 @@ Featuring:
 
 - Metallic HEATONIST sticker
 
-- 6 signature Heartbeat hot sauces, including")
+- 6 signature Heartbeat hot sauces")
 file = URI.open("https://cdn.shopify.com/s/files/1/2086/9287/products/heartbeat6pack.jpg?v=1643403975&width=680")
 sauce62.photo.attach(io: file, filename: "HeartbeatHotSauceSet_image", content_type: "image/png")
 
