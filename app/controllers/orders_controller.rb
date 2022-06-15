@@ -41,6 +41,12 @@ class OrdersController < ApplicationController
     end
   end
 
+  def myreview
+    @order = Order.find(params[:order_id])
+    @products = @order.products
+    # raise
+  end
+
   private
 
   def order_params

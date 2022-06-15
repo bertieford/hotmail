@@ -8,7 +8,9 @@ Rails.application.routes.draw do
     resources :order_products, only: [:create, :edit, :update]
   end
   # get "products/:id/add_to_basket", to: "orders#add_to_basket", as: :additem
-  resources :orders
+  resources :orders do
+    get "myreviews", to: "orders#myreview"
+  end
   resources :checkouts, only: [:show, :create] do
     resources :payments, only: :new
   end
