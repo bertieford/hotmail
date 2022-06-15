@@ -10,9 +10,30 @@
   </div>
 </div>
 
+
+<%# about us %>
+  <div class="container my-5">
+    <div id="introhead">
+    </div>
+    <div class="row">
+      <div class="column">
+        <img id="stock" src="https://eqhct8esjgc.exactdn.com/wp-content/uploads/2021/09/hot-pepper-sauce-puddle-sq.jpg?strip=all&lossy=1&ssl=1" alt="">
+      </div>
+      <div class="column" id="fill">
+      <h2>A LITTLE BIT ABOUT US</h2>
+        <p>HotMail was born out of a love of travel and trying new cuisines.</p>
+        <p>When we realised supermarkets have lacklustre selections of mass produced sauces that lack flavour and don't add much to food other than a vinegary sting. We knew we had to do something.</p>
+        <p>We want everyone to be able to experience the wide and varied world of hot sauces.</p>
+        <p>With a range of sauces from all over the world, there's something for everyone. Whether you are a chili head looking for the hottest sauce you can find, to a complete newbie dipping their finger into their first sauce. Hot Mail has you covered.</p>
+        <p>We work with independent sauce makers to bring unique flavours right to your door.</p>
+        <p>So step away from the big brands and discover something tasty and new.</p>
+      </div>
+    </div>
+  </div>
+
 <!-- cards -->
 <div class="container">
-  <h2 id="title" class="my-3">Hot Picks</h2>
+  <h2 id="title" class="my-3">HOT PICKS</h2>
   <div class="grid py-3" data-filter-products-target = "list">
     <% @rand_products.each do |product| %>
       <%= link_to product_path(product) do %>
@@ -38,25 +59,6 @@
   </div>
 </div>
 
-<%# about us %>
-  <div class="container my-5">
-    <div id="introhead">
-    </div>
-    <div class="row">
-      <div class="column">
-        <img id="stock" src="https://eqhct8esjgc.exactdn.com/wp-content/uploads/2021/09/hot-pepper-sauce-puddle-sq.jpg?strip=all&lossy=1&ssl=1" alt="">
-      </div>
-      <div class="column" id="fill">
-        <p>HotMail was born out of a love of travel and trying new cuisines.</p>
-        <p>When we realised supermarkets have lacklustre selections of mass produced sauces that lack flavour and don't add much to food other than a vinegary sting. We knew we had to do something.</p>
-        <p>We want everyone to be able to experience the wide and varied world of hot sauces.</p>
-        <p>With a range of sauces from all over the world, there's something for everyone. Whether you are a chili head looking for the hottest sauce you can find or a hot sauce veteran trying to find something with a complex falvour profile, to a complete newbie dipping their finger into their first sauce, Hot Mail has you covered.</p>
-        <p>We work with independent sauce makers to bring unique flavours right to your door.</p>
-        <p>So step away from the big brands and discover something tasty and new.</p>
-      </div>
-    </div>
-  </div>
-
 <!-- mappy -->
   <script>
     jQuery( function() {
@@ -76,7 +78,7 @@
   </script>
 
   <div class="container my-5">
-    <h3 class="mb-5">Click on the map and discover sauces from that part of the world</h3>
+    <h3 id="maptitle" class="mb-5">CLICK ON THE MAP AND DISCOVER SAUCES FROM THAT PART OF THE WORLD</h3>
     <div class="row">
       <div id="tabs" class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
         <div class="row" style="padding-left:200px;">
@@ -123,7 +125,7 @@
 
 <!-- cards -->
 <div class="container mb-5">
-  <h2 id="title" class="my-3">Gift Sets</h2>
+  <h2 id="title" class="my-3">GIFT SETS</h2>
   <div class="grid pb-3" data-filter-products-target = "list">
     <% @gift_products.each do |product| %>
       <%= link_to product_path(product) do %>
