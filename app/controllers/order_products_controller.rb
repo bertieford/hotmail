@@ -34,13 +34,12 @@ class OrderProductsController < ApplicationController
     @product = Product.find(params[:product_id])
     # DEFINING THE ORDER
     if current_user.orders.empty?
-
       @order = Order.new
       @order.user = current_user
       @order.amount += @product.price
       @order.save!
     else
-      if current_user.orders.last.state = 'complete'
+      if current_user.orders.last.state == 'complete'
         @order = Order.new
         @order.user = current_user
         @order.amount += @product.price
