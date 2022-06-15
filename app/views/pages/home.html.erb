@@ -31,6 +31,8 @@
     </div>
   </div>
 
+<hr class="solid">
+
 <!-- cards -->
 <div class="container">
   <h2 id="title" class="my-3">HOT PICKS</h2>
@@ -60,32 +62,31 @@
 </div>
 
 <!-- mappy -->
-  <script>
-    jQuery( function() {
+<script>
+  jQuery( function() {
 
-      jQuery("#tabs .regiao").click(function(event) {
-          event.preventDefault();
-          var name = jQuery(this).attr('data-name');
-          var id = jQuery(this).attr('id');
+    jQuery("#tabs .regiao").click(function(event) {
+        event.preventDefault();
+        var name = jQuery(this).attr('data-name');
+        var id = jQuery(this).attr('id');
 
-          jQuery(".regiao").removeClass("current");
-          jQuery("path#"+id+", .list-inline #"+id).addClass("current");
-          jQuery("#continent").text(name);
-      });
-
-
+        jQuery(".regiao").removeClass("current");
+        jQuery("path#"+id+", .list-inline #"+id).addClass("current");
+        jQuery("#continent").text(name);
     });
-  </script>
 
-  <div class="container my-5">
-    <h3 id="maptitle" class="mb-5">CLICK ON THE MAP AND DISCOVER SAUCES FROM THAT PART OF THE WORLD</h3>
+
+  });
+</script>
+
+<div class="boxmap" id="backmap">
+  <div id="mapall" class="container my-5">
+  <h3 id="maptitle" class="mb-5">CLICK ON THE MAP AND DISCOVER SAUCES FROM THAT PART OF THE WORLD</h3>
     <div class="row">
       <div id="tabs" class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
         <div class="row" style="padding-left:200px;">
           <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 487.65 180.78">
             <defs>
-              <style>.cls-1{fill:#ef8f6b;stroke:#9a5c44;}.cls-1,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6{stroke-miterlimit:10;}.cls-2{fill:#535353;stroke:#414242;}.cls-3,.cls-4{fill:#5c2747;}.cls-3{stroke:#3d0f2c;opacity:0.6;}.cls-4{stroke:#491937;}.cls-5{fill:#fff;stroke:#babcbe;}.cls-6{fill:#70cecd;stroke:#4b8b8c;}
-              </style>
             </defs>
 
             <!-- Africa -->
@@ -120,12 +121,12 @@
       </div>
     </div>
   </div>
-
-
+</div>
 
 <!-- cards -->
 <div class="container mb-5">
   <h2 id="title" class="my-3">GIFT SETS</h2>
+  <br>
   <div class="grid pb-3" data-filter-products-target = "list">
     <% @gift_products.each do |product| %>
       <%= link_to product_path(product) do %>
@@ -151,8 +152,6 @@
   </div>
 </div>
 
-
-
 <!-- newsletter -->
 <div class="box">
   <div class="newsletter-signup__inner inner blue_dark">
@@ -164,9 +163,8 @@
     <button class="button">SUBSCRIBE</button>
   </div>
 </div>
-
-
 </div>
+
 
 <%# testimonial %>
 
