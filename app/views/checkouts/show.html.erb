@@ -4,8 +4,9 @@
     <%# <div class="col-md-3"><%= image_tag @checkout.teddy.photo_url, width: '100%' %>
     <div class="col">
       <h1 class="pb-3">Sucsess</h1>
+      <hr>
       <ul class="list-unstyled">
-        <li><p><strong>ISSUED ON:</strong> <%= @checkout.created_at.to_date %></p></li>
+        <li><p><strong>PURCHASE DATE:</strong> <%= @checkout.created_at.to_date %></p></li>
         <li><p><strong>ORDER #:</strong> <%= @checkout.order.id %></p> </li>
         <li><p><strong>YOUR SAUCES:</strong></p></li>
         <% @checkout.order.products.each do |product| %>
@@ -15,6 +16,7 @@
         </li>
       </ul>
       <p>Estimated delivery in <strong>2 business days</strong></p>
+      <p>Why not come back when you've tried the sauce and leave a review?</p>
     </div>
   </div>
 </div>
