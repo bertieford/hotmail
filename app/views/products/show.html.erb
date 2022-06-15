@@ -19,7 +19,7 @@
       <% else %>
         <p><strong>Size:</strong> <%= @product.bottle_size %></p>
       <% end %>
-      <p>Amount: <%= humanized_money_with_symbol(@product.price) %></p>
+      <p><strong>Amount:</strong> <%= humanized_money_with_symbol(@product.price) %></p>
 
       <% if @product.reviews.count == 0 %>
         <p><strong>Be the first to review this product</strong></p>
