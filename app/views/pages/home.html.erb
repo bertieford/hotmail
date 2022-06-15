@@ -9,6 +9,34 @@
   </div>
 </div>
 
+<!-- cards -->
+<div class="container">
+  <h2 id="title" class="my-3">Hot Picks</h2>
+  <div class="grid pb-3" data-filter-products-target = "list">
+    <% @rand_products.each do |product| %>
+      <%= link_to product_path(product) do %>
+      <div class="card-trip">
+      <% if product.photo.attached?%>
+        <%= cl_image_tag product.photo.key %>
+      <% else %>
+        <img src="https://www.web2ink.com/wp-content/uploads/2020/03/coming-soon-advantage-plan..jpg" alt="">
+      <% end %>
+          <div class="card-infos">
+            <div class="card-title p-3">
+              <h2><%= product.name %> | <%= product.manufacturer %></h2>
+            </div>
+            <div class="p-3 d-flex justify-content-between flex-end">
+              <%# <%= link_to "Learn More", product_path(product) %>
+              <p>£<%= product.price %></p>
+            </div>
+            <div id="cardButton"></div>
+          </div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
 <%# about us %>
   <div class="container my-5">
     <div id="introhead">
@@ -93,28 +121,30 @@
 
 
 <!-- cards -->
-<div class="container">
-<h2 id="title" class="my-3">Our Favourites</h2>
-  <div class="cards">
-
-    <div class="card">
-      <img src="https://cdn.shopify.com/s/files/1/2086/9287/products/apollo.jpg" alt height="400px">
-      <h4>The Last Dab: Apollo | Hot Ones Hot Sauce</h4>
-      <p>£22.00</p>
-    </div>
-
-    <div class="card">
-      <img src="https://cdn.shopify.com/s/files/1/2086/9287/products/dabxxx1.jpg" alt="" height="400px">
-      <h4>The Last Dab XXX | Hot Ones Hot Sauce</h4>
-      <p>£20.00</p>
-    </div>
-
-    <div class="card">
-      <img src="https://cdn.shopify.com/s/files/1/2086/9287/products/reaperdab1_0c0eb937-a760-457e-9017-ea891db5ce03.jpg" alt="" height="400px">
-      <h4>The Last Dab - Reaper Edition | Hot Ones Hot Sauce</h4>
-      <p>£21.00</p>
-    </div>
-
+<div class="container mb-5">
+  <h2 id="title" class="my-3">Gift Sets</h2>
+  <div class="grid pb-3" data-filter-products-target = "list">
+    <% @gift_products.each do |product| %>
+      <%= link_to product_path(product) do %>
+      <div class="card-trip">
+      <% if product.photo.attached?%>
+        <%= cl_image_tag product.photo.key %>
+      <% else %>
+        <img src="https://www.web2ink.com/wp-content/uploads/2020/03/coming-soon-advantage-plan..jpg" alt="">
+      <% end %>
+          <div class="card-infos">
+            <div class="card-title p-3">
+              <h2><%= product.name %> | <%= product.manufacturer %></h2>
+            </div>
+            <div class="p-3 d-flex justify-content-between flex-end">
+              <%# <%= link_to "Learn More", product_path(product) %>
+              <p>£<%= product.price %></p>
+            </div>
+            <div id="cardButton"></div>
+          </div>
+      </div>
+      <% end %>
+    <% end %>
   </div>
 </div>
 
