@@ -1,54 +1,64 @@
+#backmap {
+  background-size: 100% 100%;
+}
+
+#mapall {
+  background-color: #1b2432;
+  background-size: cover;
+  width: 100%;
+}
+
 #maptitle {
   text-align: center;
+  color: #f4f4f6;
+  font-size: 30px;
+  padding-top: 24px;
 }
 
 #tabs {
-	color: #52233d;
-}
-
-#tabs path {
-	cursor: pointer;
-	opacity: 0.2;
-}
-
-#tabs path:hover {
-	opacity: 1;
+  color: #52233d;
 }
 
 #tabs path.semoperacao {
-	cursor: default;
-	opacity: 1;
+  cursor: default;
 }
 
 #tabs .regiao {
-	color: #666666;
-	font-weight: bold;
-	font-size: 16px;
-	cursor: pointer;
+  color: #666666;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 #tabs .regiao span{
-	font-size: 10px;
-	margin-left: 5px;
+  font-size: 10px;
+  margin-left: 5px;
 }
 
 #tabs .current {
-	color: #52233d;
-}
-
-#tabs path.current {
-	opacity: 1;
+  color: #52233d;
 }
 
 #tabs .tab-content {
-	display: none;
+  display: none;
 }
 
 #tabs #tabs-asia {
-	display: block;
+  display: block;
 }
 
 .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
-  fill: #FF8B38 !important;
-  stroke: #000000 !important;
+  fill: #ffd1b1;
+  stroke: #000000;
+  }
+
+.cls-1:hover, .cls-2:hover, .cls-3:hover, .cls-4:hover, .cls-5:hover, .cls-6:hover {
+  fill: #FF8B38;
+  stroke: #000000;
+  transition: 0.3s;
+  }
+
+  .boxmap {
+    width: 100%;
+    background-color: #1b2432;
   }
