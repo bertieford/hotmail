@@ -12,18 +12,19 @@ class OrderProductsController < ApplicationController
   end
 
   def update
+    # raise
     @order = @order_product.order
-    if params[:commit] == "UP"
+    if params[:commit] == "+"
       @order_product.qty += 1
       @order_product.save
       redirect_to order_path(@order_product.order)
-      @order.price += @order_product.product.price
+      @order.amount += @order_product.product.price
       @order.save!
-    elsif params[:commit] == "DOWN"
+    elsif params[:commit] == "-"
       @order_product.qty -= 1
       @order_product.save
       redirect_to order_path(@order_product.order)
-      @order.price -= @order_product.product.price
+      @order.amount -= @order_product.product.price
       @order.save!
     end
   end
@@ -36,17 +37,17 @@ class OrderProductsController < ApplicationController
       if current_user.orders.last.complete
         @order = Order.new
         @order.user = current_user
-        @order.price += @product.price
+        @order.amount += @product.price
         @order.save!
       else
         @order = current_user.orders.last
-        @order.price += @product.price
+        @order.amount += @product.price
         @order.save!
       end
     else
       @order = Order.new
       @order.user = current_user
-      @order.price += @product.price
+      @order.amount += @product.price
       @order.save!
     end
     # EXPLORING IF PRODUCT ALREADY EXISTS IN AN ORDER PRODUCT BELONGING TO THIS ORDER.
@@ -68,7 +69,7 @@ class OrderProductsController < ApplicationController
   def destroy
     @order_product.destroy!
     @order = @order_product.order
-    @order.price = @order.price - (@order_product.product.price * @order_product.qty)
+    @order.amount = @order.amount - (@order_product.product.price * @order_product.qty)
     @order.save!
     redirect_to order_path, status: :see_other
   end

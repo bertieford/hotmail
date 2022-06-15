@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_10_111333) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_13_140555) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,6 +42,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_10_111333) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "checkouts", force: :cascade do |t|
+    t.string "state"
+    t.string "checkout_session_id"
+    t.bigint "user_id", null: false
+    t.bigint "order_id", null: false
+    t.integer "amount_cents", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["order_id"], name: "index_checkouts_on_order_id"
+    t.index ["user_id"], name: "index_checkouts_on_user_id"
+  end
+
   create_table "order_products", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -54,10 +66,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_10_111333) do
   create_table "orders", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "complete"
-    t.float "price", default: 0.0
     t.bigint "user_id", null: false
     t.bigint "order_products_id"
+    t.integer "amount_cents", default: 0, null: false
+    t.string "amount_currency", default: "GBP", null: false
+    t.string "state"
+    t.string "checkout_session_id"
+    t.boolean "complete", default: false
     t.index ["order_products_id"], name: "index_orders_on_order_products_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
@@ -68,9 +83,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_10_111333) do
     t.string "name"
     t.text "description"
     t.string "manufacturer"
-    t.string "price"
     t.text "ingredients"
     t.string "bottle_size"
+    t.string "location"
+    t.integer "price_cents", default: 0, null: false
+    t.string "price_currency", default: "GBP", null: false
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -106,6 +123,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_10_111333) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "checkouts", "orders"
+  add_foreign_key "checkouts", "users"
   add_foreign_key "order_products", "orders"
   add_foreign_key "order_products", "products"
   add_foreign_key "orders", "order_products", column: "order_products_id"

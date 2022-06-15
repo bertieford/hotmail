@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   end
   # get "products/:id/add_to_basket", to: "orders#add_to_basket", as: :additem
   resources :orders
+  resources :checkouts, only: [:show, :create] do
+    resources :payments, only: :new
+  end
   # Defines the root path route ("/")
   # root "articles#index"
   get "blog", to: "pages#blog"

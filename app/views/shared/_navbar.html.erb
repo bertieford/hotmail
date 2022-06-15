@@ -9,7 +9,7 @@
   </ul>
   <div class="logo">HM</div>
 </nav> %>
-
+<% orders = Order.where(user: current_user) %>
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to "/", class: "navbar-brand" do %>
@@ -22,7 +22,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-        <%# if user_signed_in? %>
+        <% if user_signed_in? %>
           <li class="nav-item active">
             <%= link_to "Home", "/", class: "nav-link" %>
           </li>
@@ -30,23 +30,27 @@
             <%= link_to "Products", "/products", class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Basket", "/orders/1", class: "nav-link" %>
+            <%= link_to "Basket", order_path(orders.last), class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "https://pbs.twimg.com/profile_images/1491949205308338181/gQ3o6RCH_400x400.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <%# <% if current_user.admin == true %> %>
-              <%= link_to "Add Sauce", "products/new", class: "dropdown-item" %>
-            <%# <% end %> %>
-              <%= link_to "Orders", "/orders/", class: "dropdown-item" %>
+
+            <% if current_user %>
+              <% if current_user.admin == true %>
+                <%= link_to "Add Sauce", "products/new", class: "dropdown-item" %>
+              <% end %>
+            <% end %>
+
+              <%= link_to "My Orders", "/orders/", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data:{ turbo_method: :delete }, class: "dropdown-item" %>
             </div>
           </li>
-        <%# else %>
-          <!--li class="nav-item"-->
-            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
-          <!--/li-->
-        <%# end %>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>

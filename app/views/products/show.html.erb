@@ -11,26 +11,47 @@
       <br>
       <p><%= @product.description %></p>
       <p><strong>Ingredients: </strong><%= @product.ingredients %></p>
+      <p><strong>Location:</strong> <%= @product.location %></p>
       <p><strong>Size:</strong> <%= @product.bottle_size %></p>
-      <p><strong>Price:</strong> £<%= @product.price %></p>
+      <p>Amount: <%= humanized_money_with_symbol(@product.price) %></p>
 
-      <p><strong>Review this product</strong></p>
+      <% if @product.reviews.count == 0 %>
+        <p><strong>Be the first to review this product</strong></p>
+      <% else %>
+        <p><strong>Review this product</strong></p>
+      <% end %>
       <%= simple_form_for [@product, @review] do |f| %>
         <%= f.input :content, as: :text %>
         <%= f.input :rating, collection: (1..5).to_a, label: "Rate The Sauce" %>
         <%= f.submit "Submit", class:"btn btn-primary" %>
       <% end %>
+
+
+      <% if @product.reviews.count == 0 %>
+      <% else %>
+        <p class="py-3"><strong>What people think</strong></p>
+        <% @product.reviews.each do |review| %>
+          <p>Reviewed by: <%= review.user.first_name %></p>
+          <p>They said: <%= review.content %></p>
+          <p><%= review.rating %>/5</p>
+        <% end %>
+      <% end %>
+
     </div>
     <div class="show-img">
       <%= cl_image_tag @product.photo.key %>
     </div>
   </div>
-  <p class="py-3"><strong>Reviews</strong></p>
-  <% @product.reviews.each do |review| %>
-    <p>Reviewed by: <%= review.user.first_name %></p>
-    <p>They said: <%= review.content %></p>
-    <p><%= review.rating %>/5</p>
-  <% end %>
+  <div class="related-products my-5">
+    <p><strong>More Like <%= @product.name %></strong></p>
+     <% @relatedproducts.each do |product| %>
+      <%= link_to product_path(product) do %>
+        <div class="related-card" style="background-image: url('<%= cl_image_path product.photo.key %>')">
+        <p class="related-title"> <%= product.name %></p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 
   <% if current_user.admin == true %>
   <%= link_to "All Sauces", products_path, class:"btn btn-primary"%>
