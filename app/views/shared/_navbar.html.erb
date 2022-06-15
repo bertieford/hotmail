@@ -30,11 +30,9 @@
             <%= link_to "Products", "/products", class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <% if current_user.orders.last == nil %>
-              <%= link_to "Basket", nobasket_path, class: "nav-link" %>
-            <% else %>
+
               <%= link_to "Basket", order_path(orders.last), class: "nav-link" %>
-            <% end %>
+
           </li>
 
           <li class="nav-item dropdown">

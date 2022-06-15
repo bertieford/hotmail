@@ -32,7 +32,7 @@ class OrdersController < ApplicationController
   def show
     # @order = Order.find_by(complete: false)
     # @orders = Order.where(user: current_user, state: 'pending')
-    @order = Order.find_by(id: params[:id], state: 'pending') # how does show page know which order is the live one?
+    @order = Order.find_by(complete: false)
     if @order
       @order_products = OrderProduct.where(order_id: @order.id).order('created_at DESC')
     else
