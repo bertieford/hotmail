@@ -11,6 +11,7 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(order_params)
     @order.user = current_user
+    @order.state = "pending"
 
     session = Stripe::Checkout::Session.create(
       payment_method_types: ['card'],
@@ -32,7 +33,7 @@ class OrdersController < ApplicationController
   def show
     # @order = Order.find_by(complete: false)
     # @orders = Order.where(user: current_user, state: 'pending')
-    @order = Order.find_by(complete: false)
+    @order = Order.where(state: "pending").last
     if @order
       @order_products = OrderProduct.where(order_id: @order.id).order('created_at DESC')
     else

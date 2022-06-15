@@ -13,8 +13,6 @@ class PagesController < ApplicationController
 
   end
 
-  def blog
-  end
 
   def about
     render 'pages/blog/about'
