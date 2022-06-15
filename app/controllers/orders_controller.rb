@@ -5,7 +5,7 @@ class OrdersController < ApplicationController
   end
 
   def index
-    @orders = Order.where(user: current_user)
+    @orders = Order.where(user: current_user, state: 'complete')
   end
 
   def create
@@ -31,11 +31,11 @@ class OrdersController < ApplicationController
 
   def show
     # @order = Order.find_by(complete: false)
-    @orders = Order.where(user: current_user)
+
+    @orders = Order.where(user: current_user, state: 'pending')
     @order = Order.find(params[:id]) # how does show page know which order is the live one?
     @products = @order.products
     @order_products = OrderProduct.all.order('created_at DESC')
-
   end
 
   private

@@ -70,7 +70,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_13_140555) do
     t.bigint "order_products_id"
     t.integer "amount_cents", default: 0, null: false
     t.string "amount_currency", default: "GBP", null: false
-    t.string "state"
+    t.string "state", default: "pending"
     t.string "checkout_session_id"
     t.boolean "complete", default: false
     t.index ["order_products_id"], name: "index_orders_on_order_products_id"

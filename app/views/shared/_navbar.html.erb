@@ -30,8 +30,13 @@
             <%= link_to "Products", "/products", class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Basket", order_path(orders.last), class: "nav-link" %>
+            <% if current_user.orders.last == nil %>
+              <%= link_to "Basket", nobasket_path, class: "nav-link" %>
+            <% else %>
+              <%= link_to "Basket", order_path(orders.last), class: "nav-link" %>
+            <% end %>
           </li>
+
           <li class="nav-item dropdown">
             <%= image_tag "https://pbs.twimg.com/profile_images/1491949205308338181/gQ3o6RCH_400x400.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
