@@ -2,7 +2,7 @@
 <div class="container">
   <h1 class = "mt-5 mb-3">My Basket</h1>
   <div class="headings d-flex justify-content-between">
-    <h2>Order ID: <%= @order.id %></h2>
+
   </div>
   <hr>
   <% # LOOPING THROUGH ORDER_PRODUCTS AND SHOWING DETAILS THEREIN %>
@@ -15,6 +15,10 @@
         <p>Qty:</p>
         <br>
         <div class="qty-bar">
+
+          <%= link_to order_product_path(order_product), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn btn-primary" do %>
+            <i class="fa-solid fa-trash-can"></i>
+          <% end %>
           <%= simple_form_for [order_product.product, order_product] do |f|%>
             <%= f.button :submit, "-", class:"btn btn-primary" %>
           <%# <%= f.hidden_field :change, value: "down" %>
@@ -30,10 +34,6 @@
         <br>
 
         <%# <% sum += price %>
-
-        <%= link_to order_product_path(order_product), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn btn-primary" do %>
-          <i class="fa-solid fa-trash-can"></i>
-        <% end %>
         <br>
         <br>
       </div>
