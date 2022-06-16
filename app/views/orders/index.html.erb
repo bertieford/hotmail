@@ -1,17 +1,29 @@
 <div class="container">
-  <h1 class="my-3">Order History</h1>
-  <p>Your past orders with us:</p>
   <% if @orders.count != 0 %>
+  <div class="container">
+  <h1 class="my-5">Order History</h1>
     <% @orders.each do |order| %>
-      Order Number: <%= order.id %>
-      <br>
-      Total Cost: <%= order.amount %>
-      <br>
-      <%= link_to "Go to this order", order_myreviews_path(order) %>
-      <hr>
+    <div class="order-page-card mt-3 mb-5">
+      <div class="order-details-box">
+        Order Number: <%= order.id %>
+        <br>
+        Order date: <%= order.created_at.strftime("%d/%m/%y") %>
+        <br>
+        <div class="align-item-baseline">Total Cost: <strong><%= humanized_money_with_symbol(order.amount)%></strong></div>
+        <br>
+        <%= link_to "See this order", order_myreviews_path(order), class:"btn btn-primary" %>
+      </div>
+      <div class="order-images-card">
+        <% order.products.each do |product| %>
+          <%= cl_image_tag product.photo.key %>
+        <% end %>
+      </div>
+    </div>
     <% end %>
+  </div>
   <% else %>
     <h2>No order history yet.</h2>
+  <%= link_to "All Sauces", products_path, class:"btn btn-primary" %>
   <% end %>
-  <%= link_to "All Sauces", products_path %>
+  <br>
 </div>
