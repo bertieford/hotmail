@@ -11,7 +11,8 @@ export default class extends Controller {
   filtration(event){
     const locationFilter = event.currentTarget.innerText.replace(/\s+/g, '')
     console.log(locationFilter)
-    const url = `http://localhost:3000/products?location=${locationFilter}`
+    // const url = `http://localhost:3000/products?location=${locationFilter}`
+    const url = `http://www.hotandsaucymail.com/products/?location=${locationFilter}`
     console.log(url)
     fetch(url, {headers: {"Accept": "text/plain"}})
     .then(response => response.text())
