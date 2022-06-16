@@ -51,8 +51,10 @@
       <%= cl_image_tag @product.photo.key %>
     </div>
   </div>
-  <div class="related-products my-5">
+  <div class="more-like-this text-center my-5">
     <h4>More Like <%= @product.name %></h4>
+  </div>
+  <div class="related-products my-5">
     <% @relatedproducts.each do |product| %>
       <%= link_to product_path(product) do %>
         <div class="related-card" style="background-image: url('<%= cl_image_path product.photo.key %>')">
