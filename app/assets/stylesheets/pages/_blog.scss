@@ -1,3 +1,49 @@
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+#stock {
+  object-fit: cover;
+  width: 500px;
+  height: 500px;
+  border-radius: 24px;
+  margin-left: 134px;
+}
+
+#fill {
+  font-size: 22px;
+  padding-left: 48px;
+  padding-right: 124px;
+}
+
+.column2 {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+#stock2 {
+  object-fit: cover;
+  width: 500px;
+  height: 500px;
+  border-radius: 24px;
+  margin-left: 32px;
+}
+
+#fill2 {
+  font-size: 22px;
+  padding-left: 141px;
+}
+
+input[type='checkbox'] {
+  accent-color: #EE8434;
+}
+
+
+
+
 .recipe-img1{
   background-image: url('https://i2.wp.com/chilipeppermadness.com/wp-content/uploads/2015/04/Garlic-Habanero-Hot-Sauce1.jpg');
   width: 100px;
@@ -5,11 +51,6 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
-
-// .recipe-img2 img{
-// width: 100px;
-// height: 80px;
-// }
 
 .recipe-img3{
   background-image: url('https://i.pinimg.com/564x/c1/0c/bd/c10cbd4886383253198afc593e5f4100.jpg');
