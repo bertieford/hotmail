@@ -50,7 +50,7 @@
             </div>
             <div class="p-3 d-flex justify-content-between flex-end">
               <%# <%= link_to "Learn More", product_path(product) %>
-              <p>£<%= product.price %></p>
+              <p><%= humanized_money_with_symbol(product.price) %></p>
             </div>
             <div id="cardButton"></div>
           </div>
@@ -80,7 +80,7 @@
 
 <div class="boxmap" id="backmap">
   <div id="mapall" class="container my-5">
-  <h3 id="maptitle" class="my-5">CLICK ON THE MAP AND DISCOVER SAUCES FROM THAT PART OF THE WORLD</h3>
+  <h3 id="maptitle" class="my-5"> DISCOVER SAUCES FROM AROUND THE WORLD</h3>
     <div class="row">
       <div id="tabs" class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
         <div class="row" style="padding-left:200px;">
@@ -141,7 +141,7 @@
             </div>
             <div class="p-3 d-flex justify-content-between flex-end">
               <%# <%= link_to "Learn More", product_path(product) %>
-              <p>£<%= product.price %></p>
+              <p><%= humanized_money_with_symbol(product.price) %></p>
             </div>
             <div id="cardButton"></div>
           </div>
