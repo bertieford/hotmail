@@ -45,7 +45,7 @@
   <%= form_tag checkouts_path do %>
     <%= hidden_field_tag 'order_id', @order.id %>
     <div class="bottom-row d-flex justify-content-between">
-      <%= submit_tag 'Checkout', class: 'btn btn-primary my-3' %>
+      <%= submit_tag 'Checkout', class: 'btn btn-primary my-3 py-3 px-5' %>
       <% end %>
       <%= link_to "Want some more?", products_path%>
     </div>
