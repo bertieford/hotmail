@@ -32,25 +32,28 @@
         <%= f.submit "Submit", class:"btn btn-primary" %>
       <% end %>
 
-
       <% if @product.reviews.count == 0 %>
       <% else %>
-        <p class="py-3"><strong>What people think</strong></p>
-        <% @product.reviews.each do |review| %>
-          <p>Reviewed by: <%= review.user.first_name %></p>
-          <p>They said: <%= review.content %></p>
-          <p><%= review.rating %>/5</p>
-        <% end %>
+        <h4 class="py-3">What people think</h4>
+        <div class="reviews">
+          <div class="review-card p-3">
+            <% @product.reviews.each do |review| %>
+              <p><%= review.created_at.strftime("%d/%m/%Y") %></p>
+              <p><%= review.user.first_name %> said:</p>
+              <p><%= review.content %></p>
+              <p><%= review.rating %>/5</p>
+            <% end %>
+            </div>
+          </div>
       <% end %>
-
     </div>
     <div class="show-img">
       <%= cl_image_tag @product.photo.key %>
     </div>
   </div>
   <div class="related-products my-5">
-    <p><strong>More Like <%= @product.name %></strong></p>
-     <% @relatedproducts.each do |product| %>
+    <h4>More Like <%= @product.name %></h4>
+    <% @relatedproducts.each do |product| %>
       <%= link_to product_path(product) do %>
         <div class="related-card" style="background-image: url('<%= cl_image_path product.photo.key %>')">
         <p class="related-title"> <%= product.name %></p>
