@@ -3,27 +3,33 @@
     <%# <div class="col-md-3"><%= image_tag @checkoput.teddy.photo_url, width: '100%' %>
     <div class="col">
       <h1 class="pb-3">Checkout summary</h1>
-      <ul>
-        <% @checkout.order.products.each do |product| %>
-          <li><%= product.name %> (per item: <%= product.price %>)</li>
-        <% end %>
-      </ul>
-      <p>Total cost of order: <strong><%= humanized_money_with_symbol @checkout.amount_cents %></strong></p>
-      <button id="pay" class="btn btn-primary">Pay Now!</button>
+      <div class="order-page-card">
+        <div class="order-details-box">
+          <% @checkout.order.products.each do |product| %>
+            <p><%= product.name %> (per item: <%= humanized_money_with_symbol product.price %>)</p>
+          <% end %>
+          <p>Total cost of order: <strong><%= humanized_money_with_symbol @checkout.amount_cents %></strong></p>
+          <button id="pay" class="btn btn-primary px-5 py-3"><strong>Pay Now!</strong></button>
 
+
+          <script src="https://js.stripe.com/v3/"></script>
+          <script>
+            const paymentButton = document.getElementById('pay');
+            paymentButton.addEventListener('click', () => {
+              const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+              stripe.redirectToCheckout({
+                sessionId: '<%= @checkout.checkout_session_id %>'
+              });
+            });
+          </script>
+        </div>
+        <div class="order-images-card">
+          <% @checkout.order.products.each do |product| %>
+            <%= cl_image_tag product.photo.key %>
+          <% end %>
+        </div>
+      </div>
       <p class="py-5">If it's not with you in 3 days, get in touch!</p>
-
-      <script src="https://js.stripe.com/v3/"></script>
-      <script>
-        const paymentButton = document.getElementById('pay');
-        paymentButton.addEventListener('click', () => {
-          const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
-          stripe.redirectToCheckout({
-            sessionId: '<%= @checkout.checkout_session_id %>'
-          });
-        });
-      </script>
-
     </div>
   </div>
 </div>
